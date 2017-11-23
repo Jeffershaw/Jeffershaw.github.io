@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="This article is followed by the analysis of the previous article. Tool Preparation:python3.6 (jieba, scipy, matplotlib library) The main problem with the data a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Online course data analysis(2)">
+<meta property="og:url" content="http://yoursite.com/2017/07/24/Online-course-data-analysis-2/index.html">
+<meta property="og:site_name" content="Jeff&#39;s Homepage">
+<meta property="og:description" content="This article is followed by the analysis of the previous article. Tool Preparation:python3.6 (jieba, scipy, matplotlib library) The main problem with the data analysis above is that some non-technical">
+<meta property="og:updated_time" content="2017-11-23T22:00:27.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Online course data analysis(2)">
+<meta name="twitter:description" content="This article is followed by the analysis of the previous article. Tool Preparation:python3.6 (jieba, scipy, matplotlib library) The main problem with the data analysis above is that some non-technical">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/24/Online-course-data-analysis-2/"/>
+
+
+
+
+
+  <title>Online course data analysis(2) | Jeff's Homepage</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jeff's Homepage</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/Online-course-data-analysis-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiafeng Shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeff's Homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Online course data analysis(2)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-24T05:56:44+08:00">
+                2017-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>This article is followed by the analysis of the previous article.</p>
+<p>Tool Preparation:<br>python3.6 (jieba, scipy, matplotlib library)</p>
+<p>The main problem with the data analysis above is that some non-technical terms have too high an IDF value, thus affecting the final result.<br>So this solution is to first construct the key words one-hot vector for each lesson, and then calculate the similarity for the one-hot vector by the cosine theorem, to bring together the higher similarity classes (hierarchical clustering ). Ideally, all computer classes should be brought together and all financial classes together. Finally, find all the public class in those words, delete them.</p>
+<p>First, restore the previous data, and the index you need to prepare for one-hot build, with the following code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">data_list=[]</span><br><span class="line">with open(&apos;opencourse.json&apos;,&apos;r&apos;) as file_object:</span><br><span class="line">    data_list = json.load(file_object)</span><br><span class="line"></span><br><span class="line">word_index=&#123;&#125;</span><br><span class="line">index_word=&#123;&#125;</span><br><span class="line">count=0</span><br><span class="line">for item in data_list:</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(item[&quot;productName&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        if word_index.get(temp) ==None:</span><br><span class="line">            word_index[temp]=count</span><br><span class="line">            index_word[count]=temp</span><br><span class="line">            count+=1</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(item[&quot;description&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        if word_index.get(temp) ==None:</span><br><span class="line">            word_index[temp]=count</span><br><span class="line">            index_word[count]=temp</span><br><span class="line">            count+=1</span><br></pre></td></tr></table></figure></p>
+<p>There are a total of 15,955 keywords here, so the dimension of the one-hot vector is 15,955 and the next one is scipy.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import scipy</span><br><span class="line">import scipy.cluster.hierarchy as sch</span><br><span class="line">import matplotlib.pylab as plt</span><br><span class="line"></span><br><span class="line">word_tensor=scipy.zeros((3000,count)) #3000 courses * 15955 key words</span><br><span class="line"></span><br><span class="line">for i in range(3000):      #iterate 3000 course to build keyword vector</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(data_list[i][&quot;productName&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        word_tensor[i][word_index[temp]]+=1</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(data_list[i][&quot;description&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        word_tensor[i][word_index[temp]]+=1</span><br><span class="line"></span><br><span class="line">disMat = sch.distance.pdist(word_tensor,&apos;cosine&apos;) #using cosine as distance</span><br><span class="line">Z=sch.linkage(disMat,method=&apos;average&apos;)           </span><br><span class="line">P=sch.dendrogram(Z)                               #build the figure</span><br><span class="line">plt.savefig(&apos;figure.png&apos;)</span><br><span class="line">plt.show()</span><br><span class="line">cluster= sch.fcluster(Z, t=1.15465)     #get different classes</span><br></pre></td></tr></table></figure></p>
+<p>It is worth mentioning that the last line of code, interested friends can go directly to the official documents. fcluster () divides our calculated Zs into different classes, in fact there is one parameter criterion, which defaults to “inconsistent.” Means that the distance between two nodes is greater than the t parameter, then separate. Another model is “maxclust”, which means forcibly divided into t clust. Obviously, the latter is more suitable for us, and we need clust that the program is automatically divided into computers, finance, graphic design, and so forth. However, the result is not good, this is the result of code and classification:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cluster= sch.fcluster(Z, t=10,criterion=&apos;maxclust&apos;)</span><br><span class="line">plt.plot(cluster)</span><br></pre></td></tr></table></figure></p>
+<p>It is obvious that most of the data is in the 10th category. Because this mode, the program directly took the first nine categories, all the rest of the homing class 10. So what we want more is an evenly distributed clust. So in the “inconsistent” mode, I used the dichotomy to try out the value of 1.15465. It will be divided into 79 categories, the result is as follows:</p>
+<p>Obviously more evenly distributed, the next step is to count words that are common in all classes and delete them.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">words_in_group=&#123;&#125;</span><br><span class="line">useless_words = []</span><br><span class="line">for i in range(3000):</span><br><span class="line">   if words_in_group.get(cluster[i])==None:</span><br><span class="line">       words_in_group[cluster[i]]=scipy.zeros((1,count))</span><br><span class="line">   words_in_group[cluster[i]]+=word_tensor[i]</span><br><span class="line"></span><br><span class="line">for i in range(count):</span><br><span class="line">   c=0</span><br><span class="line">   for j in range(1,80):</span><br><span class="line">       if words_in_group[j][0][i]&gt;0:    #error, forget to reshape</span><br><span class="line">           c+=1</span><br><span class="line">   if c&gt;15:                   #word appeared more than 15 is useless word</span><br><span class="line">       useless_words.append(index_word[i])</span><br><span class="line"></span><br><span class="line">new_word=&#123;&#125;</span><br><span class="line">for item in word_count:</span><br><span class="line">    if item not in useless_words:</span><br><span class="line">        new_word[item]=word_count[item]</span><br><span class="line">x=sorted(new_word.items(),key=lambda item:item[1],reverse=True)</span><br></pre></td></tr></table></figure></p>
+<p>Useless words The results are as follows:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">[&apos;course&apos;,</span><br><span class="line">  &apos;together&apos;,</span><br><span class="line">  &apos;Q &amp; A&apos;</span><br><span class="line">  &apos;Tutorials&apos;</span><br><span class="line">  &apos;class&apos;,</span><br><span class="line">  &apos;2017&apos;,</span><br><span class="line">  &apos;buy&apos;,</span><br><span class="line">  &apos;classroom&apos;,</span><br><span class="line">  &apos;Case&apos;,</span><br><span class="line">  &apos;Update&apos;,</span><br><span class="line">  &apos;NetEase&apos;,</span><br><span class="line">  &apos;video&apos;,</span><br><span class="line">  &apos;minute&apos;,</span><br><span class="line">  &apos;QQ&apos;,</span><br><span class="line">  &apos;WeChat&apos;,</span><br><span class="line">  &apos;Advanced&apos;</span><br><span class="line">  &apos;Learn&apos;,</span><br><span class="line">  &apos;chapter&apos;,</span><br><span class="line">  &apos;design&apos;,</span><br><span class="line">  &apos;explain&apos;,</span><br><span class="line">  &apos;content&apos;,</span><br><span class="line">  &apos;Master&apos;</span><br><span class="line">  &apos;download&apos;,</span><br><span class="line">  &apos;Crash&apos;</span><br><span class="line">  &apos;teacher&apos;,</span><br><span class="line">  &apos;software&apos;,</span><br><span class="line">  &apos;welcome&apos;,</span><br><span class="line">  &apos;getting Started&apos;,</span><br><span class="line">  &apos;Speaker&apos;,</span><br><span class="line">  &apos;Training&apos;,</span><br><span class="line">  &apos;examination&apos;,</span><br><span class="line">  &apos;Classmate&apos;,</span><br><span class="line">  &apos;use&apos;,</span><br><span class="line">  &apos;Trainees&apos;</span><br><span class="line">  &apos;system&apos;,</span><br><span class="line">  &apos;we&apos;,</span><br><span class="line">  &apos;Relaxed&apos;</span><br><span class="line">  &apos;Promotion&apos;,</span><br><span class="line">  &apos;Workplace&apos;,</span><br><span class="line">  &apos;skill&apos;,</span><br><span class="line">  &apos;learn&apos;,</span><br><span class="line">  &apos;grasp&apos;,</span><br><span class="line">  &apos;can&apos;,]</span><br></pre></td></tr></table></figure></p>
+<p>A small part of the interception of these words is indeed the last chapter you want to discharge the word. The final result is as follows:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">[(&apos;Development&apos;, 218),</span><br><span class="line"> (&apos;study&apos;, 211),</span><br><span class="line"> (&apos;163&apos;, 201),</span><br><span class="line"> (&apos;PPT&apos;, 199),</span><br><span class="line"> (&apos;English&apos;, 179),</span><br><span class="line"> (&apos;Excel&apos;, 163),</span><br><span class="line"> (&apos;PS&apos;, 162),</span><br><span class="line"> (&apos;htm&apos;, 138),</span><br><span class="line"> (&apos;Programming&apos;, 119),</span><br><span class="line"> (&apos;Photography&apos;, 117),</span><br><span class="line"> (&apos;Game&apos;, 112),</span><br><span class="line"> (&apos;Animated&apos;, 103),</span><br><span class="line"> (&apos;Java&apos;, 98),</span><br><span class="line"> (&apos;Project&apos;, 88),</span><br><span class="line"> (&apos;Map&apos;, 87),</span><br><span class="line"> (&apos;series&apos;, 85),</span><br><span class="line"> (&apos;Photoshop&apos;, 82),</span><br><span class="line"> (&apos;Fun Fun&apos;, 81),</span><br><span class="line"> (&apos;Mathematics&apos;, 79),</span><br><span class="line"> (&apos;Chart&apos;, 78),</span><br><span class="line"> (&apos;Time&apos;, 78),</span><br><span class="line"> (&apos;Operations&apos;, 78),</span><br><span class="line"> (&apos;Web page&apos;, 75),</span><br><span class="line"> (&apos;Senior&apos;, 72),</span><br><span class="line"> (&apos;Accounting&apos;, 72),</span><br><span class="line"> (&apos;Live,&apos; 71),</span><br><span class="line"> (&apos;1001284001&apos;, 70),</span><br><span class="line"> (&apos;Product&apos;, 70),</span><br><span class="line"> (&apos;Business&apos;, 69),</span><br><span class="line"> (&apos;Grammar&apos;, 68),</span><br><span class="line"> (&apos;Get&apos;, 66),</span><br><span class="line"> (&apos;Exchange&apos;, 66),</span><br><span class="line"> (&apos;Python&apos;, 66),</span><br><span class="line"> (&apos;Interview&apos;, 66),</span><br><span class="line"> (&apos;UI&apos;, 65),</span><br><span class="line"> (&apos;Micro class&apos;, 65),</span><br><span class="line"> (&apos;Function&apos;, 63),</span><br><span class="line"> (&apos;Reading&apos;, 62),</span><br><span class="line"> (&apos;APP&apos;, 60),</span><br><span class="line"> (&apos;C language&apos;, 60),</span><br><span class="line"> (&apos;Database&apos;, 60),</span><br><span class="line"> (&apos;course&apos;, 59),</span><br><span class="line"> (Japanese, 59),</span><br><span class="line"> (&apos;Taobao&apos;, 58),</span><br><span class="line"> (&apos;Typography&apos;, 58),</span><br><span class="line"> (&apos;Graphic Design&apos;, 57),</span><br><span class="line"> (&apos;Complete&apos;, 57),</span><br><span class="line"> (&apos;iOS&apos;, 57),</span><br><span class="line"> (&apos;PHP&apos;, 57),</span><br><span class="line"> (&apos;Reading&apos;, 56)]</span><br></pre></td></tr></table></figure></p>
+<p>New words are more directional, are more specific terminology, although there are still some useless words, but to improve some of the coefficients should be able to more or less improve accuracy. The room for improvement lies in the fact that the unused words are removed and the vector changes accordingly. It is possible to continue iterating over the same number of times to make the classification more accurate.<br>Model improvements and more data analysis will be in the next chapter.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/24/Online-course-data-analysis-1/" rel="next" title="Online course data analysis (1)">
+                <i class="fa fa-chevron-left"></i> Online course data analysis (1)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/24/Prediction-of-Industrial-Data-with-filtration/" rel="prev" title="Prediction of Industrial Data with filtration">
+                Prediction of Industrial Data with filtration <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jiafeng Shou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">Artikel</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jiafeng Shou</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,20 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next muse use-motion" lang="">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
 
 
 
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
 
 
 
@@ -34,38 +45,27 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -77,22 +77,14 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
 
 
-
-
-
-
-<meta name="description" content="Jeffer&apos;s universe weighs 5 kg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="5 kg universe">
-<meta property="og:url" content="http://www.shoujiafeng.com/index.html">
-<meta property="og:site_name" content="5 kg universe">
-<meta property="og:description" content="Jeffer&apos;s universe weighs 5 kg">
+<meta property="og:title" content="Jeff&#39;s Homepage">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Jeff&#39;s Homepage">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5 kg universe">
-<meta name="twitter:description" content="Jeffer&apos;s universe weighs 5 kg">
+<meta name="twitter:title" content="Jeff&#39;s Homepage">
 
 
 
@@ -101,9 +93,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post"},
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: 'Author'
@@ -120,17 +114,13 @@
 
 
 
-  <link rel="canonical" href="http://www.shoujiafeng.com/"/>
+  <link rel="canonical" href="http://yoursite.com/"/>
 
 
 
 
 
-  <title> 5 kg universe </title>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
+  <title>Jeff's Homepage</title>
   
 
 
@@ -140,38 +130,43 @@
 
 
 
+</head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
 
   
   
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">5 kg universe</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jeff's Homepage</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-  <p class="site-subtitle"></p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -186,27 +181,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
+            Archiv
           </a>
         </li>
       
@@ -238,21 +223,22 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://www.shoujiafeng.com/2016/11/29/hello-world/">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/24/Distributed-System-Notes/">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Jeffer">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.png">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="5 kg universe">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="5 kg universe" src="">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiafeng Shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeff's Homepage">
+    </span>
 
     
       <header class="post-header">
@@ -260,16 +246,8 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2016/11/29/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2017/11/24/Distributed-System-Notes/" itemprop="url">Distributed System Notes</a></h1>
         
 
         <div class="post-meta">
@@ -278,9 +256,11 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-29T05:10:16+08:00">
-                2016-11-29
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-24T06:13:44+08:00">
+                2017-11-24
               </time>
             
 
@@ -296,8 +276,8 @@
           
 
           
-
           
+
           
 
           
@@ -308,7 +288,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -317,31 +299,59 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <p>#COMP212</p>
+<p>##Lecture 8</p>
+<p>###Vitualisation</p>
+<blockquote>
+<p>Threads and (mainly) processes maintain a virtual environment for a task (context)</p>
+</blockquote>
+<p>storage virtualisation-&gt;virtual memory-&gt;virtual machines-&gt;VM Ware</p>
+<p>###Desktop Vitualisation(VB,VM)</p>
+<blockquote>
+<p>Desktop virtualisation, typically, allows one to run an entire (guest) operating system as a process within the (host) operating system controlling the hardware</p>
+</blockquote>
+<p>###Server Virtualisation</p>
+<ul>
+<li>Abstraction</li>
+<li>Isolation</li>
+<li>Replication</li>
+<li>Reliability and Scalability</li>
+</ul>
+<p>###VMM Principles</p>
+<ul>
+<li>Equivalence</li>
+<li>Resource control</li>
+<li>Efficiency</li>
+</ul>
+<p>###System Snapshot</p>
+<blockquote>
+<p>take a snapshot, archive and rollback</p>
+</blockquote>
+<p>###Virtualisationb &amp; cloud computing: ad and dis:P 25-26</p>
+<p>##Lecture 10</p>
+<p>###DNS Lookup</p>
+<ol>
+<li>Iterative Name Resolution</li>
+<li>Recursive Name Resolution</li>
+</ol>
 
           
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
+    
 
     <footer class="post-footer">
+      
+
       
 
       
@@ -351,6 +361,1257 @@
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/24/Prediction-of-Industrial-Data-with-filtration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiafeng Shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeff's Homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/24/Prediction-of-Industrial-Data-with-filtration/" itemprop="url">Prediction of Industrial Data with filtration</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-24T06:10:41+08:00">
+                2017-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Prediction-of-Industrial-Data-with-filtration"><a href="#Prediction-of-Industrial-Data-with-filtration" class="headerlink" title="Prediction of Industrial Data with filtration"></a>Prediction of Industrial Data with filtration</h2><p><em>Abstract</em> — the prediction of the industrial data can intensify the control ability of the industrial machine, which can adjust the speed according the prediction results. We propose a novel prediction algorithm for industrial data prediction using a classifier, which can strip fluctuating data from a large amount of stable data that increase the accuracy of the forecasting and shorten the training time. We have tested the algorithm using 100, 000 data of diameter of wires as the test set. Experimental results show that our novel prediction algorithm can significantly improve the prediction accuracy and has better performance than LSTM-RNN, LSTM-RNN-dropout and LSTM-RNN-BN algorithms.</p>
+<p><em>Keywords</em> — <em>industrial data prediction; classifier; lstm-rnn; dropout, batch normalization; anomaly data filteration</em></p>
+<ol>
+<li>I.INTRODUCTION</li>
+</ol>
+<p>The industrial data is collected from a machine which manufactures wires. Diameter monitoring sensors are remotely deployed in the manufactures they are monitoring. Therefore, the diameters of the wire and other data such as current will be transmitted to the collectors continuously. Because sensors operate in a complex manufacturing environment such as the fluctuation of current, the diversification of the temperature, the rotation speed of the machine, there is a great probability that there are a large amount of corrupted data in the collected data. Therefore, the pre-process of the collected data is necessary before the training procedure. However, we also used the unprocessed data for training as a comparison. After the preprocessing, we need to get the prediction that is intends to tell the machine trend of the wire&#39;s diameter which is decreasing or increasing.</p>
+<p> Varies of applications use prediction algorithms to set up a model from a dataset to get the future trend of the data. There are several prediction algorithms proposed in recent years. Support Vector Machine is one of the most popular methodologies in prediction. S. Hirose proposed a two-level SVM prediction system for reliably predicting long disordered regions [1]. SVM-based prediction of linear B-cell epitopes using Bayes Feature Extraction was proposed by Lawrence JK Wee [2]. However, SVM is a time complexity algorithm when the dataset is very large and not very suitable for industrial application. Recurrent neural network is another algorithm used for data prediction. On this basis, the improved Long Short Term Memory algorithm is very effective for long sequence dependency problems.</p>
+<p> This study develops a LSTM-RNN model with a classifier for industrial data prediction. And we also compared the prediction result of several different algorithms which includes 1-layer lstm-rnn, 2-layer lstm-rnn, 2-layer lstm-rnn with dropout method, 2-layer lstm-rnn with recurrent batch normalization method and lstm-rnn with a classifier. We discuss the basic methodology in Section and use a industrial dataset to verify the basic algorithms in Section3. After that, we proposed a lstm-rnn-classifier to improve the prediction accuracy through a case study. In the last section, we make a conclusion and propose our future work.</p>
+<ol>
+<li>II.Basic Conceptions<ol>
+<li>A.Long Short Term Memory</li>
+</ol>
+</li>
+</ol>
+<p>The long short-term memory (LSTM) model was proposed in 1997 by Sepp Hoch Reiter and Jürgen Schumacher [3]. This model solves gradient vanish problem in the recurrent neural network (RNN) by importing cell and gates. The basic architecture of LSTM is shown in the figure 1. [4]</p>
+<p>The LSTM model controls forget rate of the last status by forget gate:</p>
+<p>Wσ(fxxt+Wfhht−1+bf)ft=</p>
+<p>which is decided by current input xt<br> and last hidden state<br>ht−1<br>. The current input would be controlled by input gate:</p>
+<p>it=σ(Wixxt+Wihht−1+bi)<br>                (2)</p>
+<p>which decides how much of current input can flow into cell. The output is controlled by output gate:</p>
+<p>ot=σ(Woxxt+Wohht−1+bo)</p>
+<p>which decides how much of the hidden states can flow into next status. Then input should be activated by activation function:</p>
+<p>c~t=tanh(Wcxxt+Wchht−1+bc)<br>                (4)</p>
+<p>where  c~t<br> stands for the intermediate addition to cell. Finally, the cell and hidden state would update the value by the gate:</p>
+<p>ct=ft∗ct−1+c~t∗it</p>
+<p>ht=ot∗tanh(ct)<br>                                        (6)</p>
+<p>where ct<br> is the current cell state and<br>ht<br> is the current hidden state that are delivering to next state.</p>
+<p>Since the study aims to predict a sequent value in next second, the model would be sequence to sequence, which receives a sequence as parameter and generates a sequence as output.</p>
+<p>1.</p>
+<ol>
+<li>B.Dropout Layer</li>
+</ol>
+<p>In the neural network&#39;s training, adding dropout layer in the hidden layer or full connect layer could prevent neural networks from overfitting. Dropout can be interpreted as a way of regularizing a neural network by adding noise to its hidden units [5]. That leads to less dependency between neurons in different layers. Dropout is not only applied in NN and CNN, but it is also proved that in RNN, a higher recurrent layer dropout probability leads to increased probability to overfitting [5][6].</p>
+<p>In this study, a prediction without overfitting is expected. Therefore, dropout would be applied in the hidden layer.</p>
+<p>1.</p>
+<ol>
+<li>C.Recurrent Batch Normalization</li>
+</ol>
+<p>The training cost of large dataset of Recurrent Neural Network is hard to decrease if the number of nodes and layers is large. The time we train on the server takes a whole day or more. In order to reduce training time, there are two ways, which are using GPU instead of CPU or accelerating conditioned optimization procedures. Batch normalization has been firstly proposed as a better optimization method for FNN or CNNs. After that, Cesar Laurent proposed the Recurrent Batch Normalization for RNNs which showed that the training time can be reduced.</p>
+<p>In order to reduce the internal covariate shift, the whiten procedure could be applied to each layer of the network. Batch normalization approximates the whitening by standardizing the intermediate representations using the statistics of the current mini-batch. The sample mean and sample variance of each feature <em>k</em> can be calculated by given a mini-batch X,</p>
+<p>x&#39;=1m∑i=1mxi,k<br>                                        (7)</p>
+<p>σk2=1m∑i=1m(xi,k−x&#39;k)2<br>                (8)</p>
+<p>Where <em>m</em> is the size of mini-batch. Each feature can be standardized as follows</p>
+<p>x&#39;k=xk−x&#39;kσk2+ϵ<br>                                                (9)</p>
+<p>where ϵ<br> is a small positive constant to improve numerical stability. After the scale and shift, we can get the optimization result.</p>
+<p>yk←γx&#39;k+β≡BNγ,β(xi)</p>
+<p>Where γ<br> and<br>β<br> is the learnable parameters, which respectively scale and shift the data.</p>
+<p>ht=∅(BN(Whht−1+Wxxt))</p>
+<p>Where ∅<br> is the activation function, W is the weights matrix,<br>ht<br> is the current state result and<br>ht−1<br> is the last state result.</p>
+<p>We set the BN between the hidden layer and the output layer.</p>
+<p>1.</p>
+<ol>
+<li>D.One-hot encoding</li>
+</ol>
+<p>In the case study, the result shows that the former model does not work in the prediction. There are two factors: single dimension input and large range of stable values.</p>
+<p>For the single dimension issue, one appropriate way to raise the dimension is using one-hot encoding, which is popular in natural language processing. The definition of one-hot encoding is a group of bits among which the legal combinations of values are only those with single high (1) bit and all the others low (0) [7].</p>
+<p>The idea is that there would be (2+n)<br> bits. The figure could be found in Figure 3. Each bit in the<br>n<br> stands for an interval lasting 0.03. All<br>n<br> bits would be in the qualified range. Any value beyond the range would be the other 2 bits. There is the example for value from 1.85-2.02.</p>
+<p>Therefore, the input of 1.864 would be [0,1,0,0,0]<br> etc.</p>
+<p>The input and output should be discrete value, not an interval. However, since the study focus on the prediction of tendency, the accurate discrete value is not required. Therefore, the tradeoff between dimension and accuracy could be accepted.</p>
+<p>1.</p>
+<ol>
+<li>E.Classification and Fitting</li>
+</ol>
+<p>The large range of stable value would make training hard. The first reason is that the amount of neuron is not enough to support fitting a curve, which contains thousands of points. Once adding the amount of neuron is token, the increment in training and calculation is unacceptable. The second reason is that the amount of fluctuating points is small while comparing with the whole data. The data of experiment shows that there is 95% stable data. In the training, the small number of fluctuating points would be regarded as anomaly, which would be ignored by small neuron networks. That leads to fitting as a horizontal line whose value is close to the mean value of data. Since the mean value line has the minimal error, the result is reasonable.</p>
+<p>To lessen the influence of stable value, a classification and fitting model is proposed. The idea is that filter all stable value and do fitting to the remaining fluctuating points. Because the neighbor stable points have the approximate value, which could be applied to shrink all stable values as a single point. The illustration could be found in the Figure 2. The example is a one-dimension data.</p>
+<p>The model architecture could be found in the Figure 3.</p>
+<p>The point classified as stable value would produce itself as prediction in next second. For the point classified as fluctuating points, it would fit to predict in the pre-training LSTM model.</p>
+<p>It is proved that LSTM model has extraordinary performance in classification [8].</p>
+<p>1.</p>
+<ol>
+<li>F.Hyper-Parameter</li>
+</ol>
+<p>In the case study, there are some hyper-parameter to set by default for the convenient.</p>
+<p>Since all data would be normalized before training, the learning rate would be set as 0.0006, which is suitable for most training value between -1 and 1.</p>
+<p>The neuron number in the single layer would be set as 200. Since the model would be applied in the industry, it is impossible to train a large neural network for a long time.</p>
+<p>The time step is set as 40 steps. Prediction is more accurate while the input steps grow [9]. Considering the practical application for each computer, it is reasonable to choose a low value as steps while it costs a little memory.</p>
+<ol>
+<li>III.Case Study and Analyses<ol>
+<li>A.Anomaly data filtration</li>
+</ol>
+</li>
+</ol>
+<p>The industrial dataset contains a large number of anomaly data due to the fluctuation of the current or machine errors. Therefore, the data filtration is necessary before the prediction. However, we also have done a comparison test to show the difference between the filtration and non-filtration test. The algorithm applied here is the dual time-moving windows anomaly detection algorithm which sets a one-layer FNN and two moving window to detect anomaly data which is based on the model proposed by David J. Hill. Figure 4 shows the comparison between the original data and the filtered data.</p>
+<p>According to the figures above, we could observe that the filtered data is smoother than before. And some data in the figure4 deviated quite a lot from the normal data. If such these are applied for training, the model will be faint to remember plenty of data models.</p>
+<p>1.</p>
+<ol>
+<li>B.One-layer Long Short Term Memory Recurrent Neural Network</li>
+</ol>
+<p>We ran experiments on the open source framework tensorflow. The framework were implemented using Python. For the prediction test, we firstly tested the initial mode – one-layer Long Short Term Memory Recurrent Neural Network with 10,000 records of xy diameter means as the training set and 27,660 records of xy diameter means as the test set. The hidden layer of the model had 200 units with the prediction time step of 40 and the learning rate is set as 0.0006 for the gradient descent function. The details are shown in the table 2.</p>
+<p>TABLE 2 PARAMETERS SETTING</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Layer num</th>
+<th>Unit num</th>
+<th>Learning rate</th>
+<th>Time Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>1</td>
+<td>200 neuron</td>
+<td>0.0006</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 3 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>99.8%</td>
+<td>76.7%</td>
+<td>22.2%</td>
+</tr>
+</tbody>
+</table>
+<p>The figure 5 shows the test result which includes 27660 records. From the figure, we could observe that the prediction line did not coincide with the actual data line very well. However, the table2 shows the intuitive performance of the prediction accuracy. Confidence interval was set as 0.1, 0.01 and 0.001, which was in order to calculate the number of prediction points which fall into the interval deviated from the actual input data. From the table3, we could observe that the prediction model seems to get a satisfactory result when the confidence interval is 0.1 which is 0.9981. However, the accuracy got a rapid reduction when the accuracy is 0.001. We assumed that the lack of the number of layer of the network leads to the failure of prediction accuracy. Therefore, we have done the second experiment of two layer LSTM-RNN.</p>
+<p>1.</p>
+<ol>
+<li>C.Two-layer LSTM RNN model</li>
+</ol>
+<p>Single layer LSTM model shows an unsatisfactory result. Although the model has 99.8% accuracy in an error range of 0.1, it only has 76.7% accuracy in an error range of 0.01. The accuracy of the second decimal place should be above 90% to make an approximate prediction of tendency. Therefore, 2-layer LSTM model aims to solve under-fitting problem. The hyper parameters are set as follows:</p>
+<p>TABLE 4 PARAMETERS SETTING</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Layer num</th>
+<th>Unit num</th>
+<th>Learning rate</th>
+<th>Time Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>2</td>
+<td>200 neuron each layer</td>
+<td>0.0006</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 5 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>99.9%</td>
+<td>96.4%</td>
+<td>23.0%</td>
+</tr>
+</tbody>
+</table>
+<p>The test set is the same as the one layer LSTM experiment. In Figure 6, the result shows satisfactory fitting curve. It is easy to find that the prediction value is much more accuracy from the point 10,000 to 15,000. And the details of the prediction accuracy are listed in the table 5. Compared with the last experiment, the prediction accuracy increased a lot when the confidence interval is 0.01 which increased 19.7%. According to the result above, we could assume that the complicated neural network model will lead to a more precisely prediction.</p>
+<p>However, this model did not work well in precise value prediction. Because the amount of fluctuating points is so little that all fluctuating points are regarded anomaly points by the neural network. In the F part, it would be proved that the trained model does not have any prediction ability due to little neurons.</p>
+<p>In general, 2-layer LSTM model does solve under-fitting problem.</p>
+<p>1.</p>
+<ol>
+<li>D.Dropout LSTM-RNN</li>
+</ol>
+<p>2-layer LSTM could make prediction of tendency. However, if the accurate value (the third decimal place) is required to predict, 23.0% is not enough. Next, drop-out would be applied to improve the 2-layer model performance. If 23.0% was caused by overfitting, then drop-out would be a perfect method to solve it. In the design, drop-out would be added between layer and layer. The hyper parameters are set as follows:</p>
+<p>TABLE 6 PARAMETER SETTINGS</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Dropout rate</th>
+<th>Layer num</th>
+<th>Unit num</th>
+<th>Learning rate</th>
+<th>Time Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>0.675/0.8</td>
+<td>2</td>
+<td>200 neuron each</td>
+<td>0.0006</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 7 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy (drop-out 0.675)</td>
+<td>99.9%</td>
+<td>77.9%</td>
+<td>15.6%</td>
+</tr>
+<tr>
+<td>Accuracy (drop-out 0.8)</td>
+<td>99.9%</td>
+<td>78.8%</td>
+<td>14.3%</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 7 shows the result of drop-out rate 0.675, and Figure 8 shows the result of drop-out rate 0.8. In the Figure 7 and Figure 8, the curve fits unstably. The statics result is calculated as shown in the table 7. The result shows the drop-out weaken 2-layer LSTM model performance. There could be many reasons: original model has fitted perfectly, drop-out place, or single data dimension. Therefore, drop-out is not an appropriate solution to predict the accurate value. It cannot improve the performance of 2-layer LSTM model.</p>
+<p>1.</p>
+<ol>
+<li>E.Recurrent Batch Normalization in LSTM-RNN</li>
+</ol>
+<p>According to the Cesar Laurent&#39;s research, we could considered that the recurrent batch normalization is able to accelerate the convergence of the training criterion. However, they concluded that the RBN may not improve the generalization performance, we tried to test our model which is in order to improve the prediction accuracy of our industrial dataset. For comparison with the initial LSTM model, we set 1 hidden layer with 200 neurons and 0.006 learning rate. The hyper parameters are set as follow:</p>
+<p>TABLE 7 PARAMETER SETTINGS</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Layer num</th>
+<th>Unit num</th>
+<th>Learning rate</th>
+<th>Time Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>1</td>
+<td>200 neuron</td>
+<td>0.0006</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 8 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>99.6%</td>
+<td>89.1%</td>
+<td>9.05%</td>
+</tr>
+</tbody>
+</table>
+<p>The figure 9 shows the prediction result. And the details are shown in the table 8. Although the prediction accuracy increased when the confidence interval is 0.01, there is nuance difference between other algorithms. Moreover, the performance of the 0.001 interval is quite unsatisfactory. Therefore, we can conclude that the recurrent batch normalization may not help to improve the prediction precisely.</p>
+<p>1.</p>
+<ol>
+<li>F.Classification and Fit</li>
+</ol>
+<p>In methodology, it has been discussed that 2-layer LSTM cannot predict the accurate value due to the long range of stable value. Then the prediction ability of 2-layer LSTM model is tested based on predict value. The Figure.10 shows bad prediction ability. The value coordinate axis is still normalized value:</p>
+<p>valuenormal=(valueoriginal−mean(data))/standard(data)<br>        (12)</p>
+<p>It can be observed that the final prediction value would trend to the mean. It is reasonable when the number of neurons cannot support fit the complex curve and there is a long range of stable value. However, it is not efficient to solve problem by adding a lot of neurons. In that way, it would cost plenty of time to train, which may not be affordable for industrial company. Classification and fit model could solve both two problems.</p>
+<p>To apply classification and fit model, the training data should be labelled as stable point or violate point by human. First train would be to classify the label. Since the result shows that 95% points are stable point, it is reasonable for LSTM model to regard other points as anomaly points. In the second train, LSTM would fit all violate points. Therefore, there are two sets of parameters for each single LSTM model which is the same as 2-layer LSTM-RNN model. The test results are shown in the figure 11. And the details of prediction accuracy are shown in the table 9</p>
+<p>TABLE 9 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>100%</td>
+<td>97.7%</td>
+<td>58.1%</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 10 PREDICTION ACCURARCY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>100%</td>
+<td>96.5%</td>
+<td>39.6%</td>
+</tr>
+</tbody>
+</table>
+<p>The result and figure show this model is better than any model before in each error range. Regarding 95% points are stable point, it is necessary to test the slice of data, which contains equivalent amount of stable points and violate points. Here, Figure 12 is the slice data. Figure 13 shows the results, and the details are shown in the table 10. Although the accuracy of error range 0.001 decreases, it is still higher than accuracy of 2-layer model.</p>
+<p>In general, classification and fit model works well in either data or data slice. It is potential for the model to predict the specific value.</p>
+<ol>
+<li>IV.Conclusion</li>
+</ol>
+<p>We have developed a classification prediction algorithm based on the Long Short Term Memory Recurrent Neural Network for industrial data which performs an accurate, fast prediction of the data. We although compared 4 current algorithms based on the RNN. The accuracy of this prediction algorithm is illustrated by a case study involving 36670 wires diameter dataset. Experimental results show that the classification strategy significantly increase the prediction accuracy and has better performance than one-layer, two-layer LSTM-RNN, dropout-LSTM-RNN and RBN-LSTM-RNN algorithms.</p>
+<p>Future work will be carried out to improve the accuracy of prediction chromatically by using the one-hot algorithm or k-means method and we will try to collect various kinds of data which is in order to set the model by using multi-dimension data.</p>
+<p>[3] S. Hoch Reiter and J. Schumacher, &quot;Long short-term memory&quot; (1997) in <em>Neural Computation</em>. doi:10.1162/neco.1997.9.8.1735.</p>
+<p>[4] K. Griff; R. K. Srivastava; J. Kouthik; B. R. Steunebrink; J. Schmidhuber, &quot;LSTM: A Search Space Odyssey&quot; (2015)</p>
+<p>[5] N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, R. Salakhutdinov, &quot;Dropout: A Simple Way to Prevent Neural Networks from Overfitting&quot; (2014) in Journal of Machine Learning Research 15 (2014) 1929-1958.</p>
+<p>[6] Y. Gal, Z. Ghahramani &quot;A Theoretically Grounded Application of Dropout in Recurrent Neural Networks&quot; NIPS (2016).</p>
+<p>[7] Harris, David and Harris, Sarah &quot;Digital design and computer architecture&quot; (2</p>
+<h1 id="nd"><a href="#nd" class="headerlink" title="nd"></a>nd</h1><p> edition) p. 129. ISBN 978-0-12-394424-5</p>
+<p>[8] M. Wielgosz, A.Skoczen, M.Mertik &quot;Recurrent Neural Networks for anomaly detection in the Post-Mortem time series of LHC superconducting magnets&quot; CoRR abs/1702.00833 (2017): n. pag.</p>
+<p>[9] N. Srivastava, E. Mansimov, R. Salakhutdinov &quot;Unsupervised Learning of Video Representations using LSTMS.&quot; ICML (2015).</p>
+<p></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/Online-course-data-analysis-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiafeng Shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeff's Homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/24/Online-course-data-analysis-2/" itemprop="url">Online course data analysis(2)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-24T05:56:44+08:00">
+                2017-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>This article is followed by the analysis of the previous article.</p>
+<p>Tool Preparation:<br>python3.6 (jieba, scipy, matplotlib library)</p>
+<p>The main problem with the data analysis above is that some non-technical terms have too high an IDF value, thus affecting the final result.<br>So this solution is to first construct the key words one-hot vector for each lesson, and then calculate the similarity for the one-hot vector by the cosine theorem, to bring together the higher similarity classes (hierarchical clustering ). Ideally, all computer classes should be brought together and all financial classes together. Finally, find all the public class in those words, delete them.</p>
+<p>First, restore the previous data, and the index you need to prepare for one-hot build, with the following code:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">data_list=[]</span><br><span class="line">with open(&apos;opencourse.json&apos;,&apos;r&apos;) as file_object:</span><br><span class="line">    data_list = json.load(file_object)</span><br><span class="line"></span><br><span class="line">word_index=&#123;&#125;</span><br><span class="line">index_word=&#123;&#125;</span><br><span class="line">count=0</span><br><span class="line">for item in data_list:</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(item[&quot;productName&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        if word_index.get(temp) ==None:</span><br><span class="line">            word_index[temp]=count</span><br><span class="line">            index_word[count]=temp</span><br><span class="line">            count+=1</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(item[&quot;description&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        if word_index.get(temp) ==None:</span><br><span class="line">            word_index[temp]=count</span><br><span class="line">            index_word[count]=temp</span><br><span class="line">            count+=1</span><br></pre></td></tr></table></figure></p>
+<p>There are a total of 15,955 keywords here, so the dimension of the one-hot vector is 15,955 and the next one is scipy.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import scipy</span><br><span class="line">import scipy.cluster.hierarchy as sch</span><br><span class="line">import matplotlib.pylab as plt</span><br><span class="line"></span><br><span class="line">word_tensor=scipy.zeros((3000,count)) #3000 courses * 15955 key words</span><br><span class="line"></span><br><span class="line">for i in range(3000):      #iterate 3000 course to build keyword vector</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(data_list[i][&quot;productName&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        word_tensor[i][word_index[temp]]+=1</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(data_list[i][&quot;description&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        word_tensor[i][word_index[temp]]+=1</span><br><span class="line"></span><br><span class="line">disMat = sch.distance.pdist(word_tensor,&apos;cosine&apos;) #using cosine as distance</span><br><span class="line">Z=sch.linkage(disMat,method=&apos;average&apos;)           </span><br><span class="line">P=sch.dendrogram(Z)                               #build the figure</span><br><span class="line">plt.savefig(&apos;figure.png&apos;)</span><br><span class="line">plt.show()</span><br><span class="line">cluster= sch.fcluster(Z, t=1.15465)     #get different classes</span><br></pre></td></tr></table></figure></p>
+<p>It is worth mentioning that the last line of code, interested friends can go directly to the official documents. fcluster () divides our calculated Zs into different classes, in fact there is one parameter criterion, which defaults to “inconsistent.” Means that the distance between two nodes is greater than the t parameter, then separate. Another model is “maxclust”, which means forcibly divided into t clust. Obviously, the latter is more suitable for us, and we need clust that the program is automatically divided into computers, finance, graphic design, and so forth. However, the result is not good, this is the result of code and classification:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cluster= sch.fcluster(Z, t=10,criterion=&apos;maxclust&apos;)</span><br><span class="line">plt.plot(cluster)</span><br></pre></td></tr></table></figure></p>
+<p>It is obvious that most of the data is in the 10th category. Because this mode, the program directly took the first nine categories, all the rest of the homing class 10. So what we want more is an evenly distributed clust. So in the “inconsistent” mode, I used the dichotomy to try out the value of 1.15465. It will be divided into 79 categories, the result is as follows:</p>
+<p>Obviously more evenly distributed, the next step is to count words that are common in all classes and delete them.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">words_in_group=&#123;&#125;</span><br><span class="line">useless_words = []</span><br><span class="line">for i in range(3000):</span><br><span class="line">   if words_in_group.get(cluster[i])==None:</span><br><span class="line">       words_in_group[cluster[i]]=scipy.zeros((1,count))</span><br><span class="line">   words_in_group[cluster[i]]+=word_tensor[i]</span><br><span class="line"></span><br><span class="line">for i in range(count):</span><br><span class="line">   c=0</span><br><span class="line">   for j in range(1,80):</span><br><span class="line">       if words_in_group[j][0][i]&gt;0:    #error, forget to reshape</span><br><span class="line">           c+=1</span><br><span class="line">   if c&gt;15:                   #word appeared more than 15 is useless word</span><br><span class="line">       useless_words.append(index_word[i])</span><br><span class="line"></span><br><span class="line">new_word=&#123;&#125;</span><br><span class="line">for item in word_count:</span><br><span class="line">    if item not in useless_words:</span><br><span class="line">        new_word[item]=word_count[item]</span><br><span class="line">x=sorted(new_word.items(),key=lambda item:item[1],reverse=True)</span><br></pre></td></tr></table></figure></p>
+<p>Useless words The results are as follows:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">[&apos;course&apos;,</span><br><span class="line">  &apos;together&apos;,</span><br><span class="line">  &apos;Q &amp; A&apos;</span><br><span class="line">  &apos;Tutorials&apos;</span><br><span class="line">  &apos;class&apos;,</span><br><span class="line">  &apos;2017&apos;,</span><br><span class="line">  &apos;buy&apos;,</span><br><span class="line">  &apos;classroom&apos;,</span><br><span class="line">  &apos;Case&apos;,</span><br><span class="line">  &apos;Update&apos;,</span><br><span class="line">  &apos;NetEase&apos;,</span><br><span class="line">  &apos;video&apos;,</span><br><span class="line">  &apos;minute&apos;,</span><br><span class="line">  &apos;QQ&apos;,</span><br><span class="line">  &apos;WeChat&apos;,</span><br><span class="line">  &apos;Advanced&apos;</span><br><span class="line">  &apos;Learn&apos;,</span><br><span class="line">  &apos;chapter&apos;,</span><br><span class="line">  &apos;design&apos;,</span><br><span class="line">  &apos;explain&apos;,</span><br><span class="line">  &apos;content&apos;,</span><br><span class="line">  &apos;Master&apos;</span><br><span class="line">  &apos;download&apos;,</span><br><span class="line">  &apos;Crash&apos;</span><br><span class="line">  &apos;teacher&apos;,</span><br><span class="line">  &apos;software&apos;,</span><br><span class="line">  &apos;welcome&apos;,</span><br><span class="line">  &apos;getting Started&apos;,</span><br><span class="line">  &apos;Speaker&apos;,</span><br><span class="line">  &apos;Training&apos;,</span><br><span class="line">  &apos;examination&apos;,</span><br><span class="line">  &apos;Classmate&apos;,</span><br><span class="line">  &apos;use&apos;,</span><br><span class="line">  &apos;Trainees&apos;</span><br><span class="line">  &apos;system&apos;,</span><br><span class="line">  &apos;we&apos;,</span><br><span class="line">  &apos;Relaxed&apos;</span><br><span class="line">  &apos;Promotion&apos;,</span><br><span class="line">  &apos;Workplace&apos;,</span><br><span class="line">  &apos;skill&apos;,</span><br><span class="line">  &apos;learn&apos;,</span><br><span class="line">  &apos;grasp&apos;,</span><br><span class="line">  &apos;can&apos;,]</span><br></pre></td></tr></table></figure></p>
+<p>A small part of the interception of these words is indeed the last chapter you want to discharge the word. The final result is as follows:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">[(&apos;Development&apos;, 218),</span><br><span class="line"> (&apos;study&apos;, 211),</span><br><span class="line"> (&apos;163&apos;, 201),</span><br><span class="line"> (&apos;PPT&apos;, 199),</span><br><span class="line"> (&apos;English&apos;, 179),</span><br><span class="line"> (&apos;Excel&apos;, 163),</span><br><span class="line"> (&apos;PS&apos;, 162),</span><br><span class="line"> (&apos;htm&apos;, 138),</span><br><span class="line"> (&apos;Programming&apos;, 119),</span><br><span class="line"> (&apos;Photography&apos;, 117),</span><br><span class="line"> (&apos;Game&apos;, 112),</span><br><span class="line"> (&apos;Animated&apos;, 103),</span><br><span class="line"> (&apos;Java&apos;, 98),</span><br><span class="line"> (&apos;Project&apos;, 88),</span><br><span class="line"> (&apos;Map&apos;, 87),</span><br><span class="line"> (&apos;series&apos;, 85),</span><br><span class="line"> (&apos;Photoshop&apos;, 82),</span><br><span class="line"> (&apos;Fun Fun&apos;, 81),</span><br><span class="line"> (&apos;Mathematics&apos;, 79),</span><br><span class="line"> (&apos;Chart&apos;, 78),</span><br><span class="line"> (&apos;Time&apos;, 78),</span><br><span class="line"> (&apos;Operations&apos;, 78),</span><br><span class="line"> (&apos;Web page&apos;, 75),</span><br><span class="line"> (&apos;Senior&apos;, 72),</span><br><span class="line"> (&apos;Accounting&apos;, 72),</span><br><span class="line"> (&apos;Live,&apos; 71),</span><br><span class="line"> (&apos;1001284001&apos;, 70),</span><br><span class="line"> (&apos;Product&apos;, 70),</span><br><span class="line"> (&apos;Business&apos;, 69),</span><br><span class="line"> (&apos;Grammar&apos;, 68),</span><br><span class="line"> (&apos;Get&apos;, 66),</span><br><span class="line"> (&apos;Exchange&apos;, 66),</span><br><span class="line"> (&apos;Python&apos;, 66),</span><br><span class="line"> (&apos;Interview&apos;, 66),</span><br><span class="line"> (&apos;UI&apos;, 65),</span><br><span class="line"> (&apos;Micro class&apos;, 65),</span><br><span class="line"> (&apos;Function&apos;, 63),</span><br><span class="line"> (&apos;Reading&apos;, 62),</span><br><span class="line"> (&apos;APP&apos;, 60),</span><br><span class="line"> (&apos;C language&apos;, 60),</span><br><span class="line"> (&apos;Database&apos;, 60),</span><br><span class="line"> (&apos;course&apos;, 59),</span><br><span class="line"> (Japanese, 59),</span><br><span class="line"> (&apos;Taobao&apos;, 58),</span><br><span class="line"> (&apos;Typography&apos;, 58),</span><br><span class="line"> (&apos;Graphic Design&apos;, 57),</span><br><span class="line"> (&apos;Complete&apos;, 57),</span><br><span class="line"> (&apos;iOS&apos;, 57),</span><br><span class="line"> (&apos;PHP&apos;, 57),</span><br><span class="line"> (&apos;Reading&apos;, 56)]</span><br></pre></td></tr></table></figure></p>
+<p>New words are more directional, are more specific terminology, although there are still some useless words, but to improve some of the coefficients should be able to more or less improve accuracy. The room for improvement lies in the fact that the unused words are removed and the vector changes accordingly. It is possible to continue iterating over the same number of times to make the classification more accurate.<br>Model improvements and more data analysis will be in the next chapter.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/24/Online-course-data-analysis-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiafeng Shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeff's Homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/24/Online-course-data-analysis-1/" itemprop="url">Online course data analysis (1)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-24T05:47:33+08:00">
+                2017-06-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>This article is going to analyze the data of NetEase cloud classroom, analyze the hot spot of study nowadays.</p>
+<p>Tool Preparation:<br>Chrome browser,<br>python3.6 (contains requests, jieba library)</p>
+<p>First open all the courses - NetEase cloud class, after landing open chrome developer tools, after analysis found that the cloud classroom data is obtained directly through ajax, so direct copy cookie simulation send package, skip login simulation.</p>
+<p>The screenshot shows the structure of this json data<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">import json</span><br><span class="line"></span><br><span class="line">header = &#123;</span><br><span class="line">&apos;Accept&apos;:&apos;application/json&apos;,</span><br><span class="line">&apos;Accept-Encoding&apos;:&apos;gzip, deflate&apos;,</span><br><span class="line">&apos;Accept-Language&apos;:&apos;zh-CN,zh;q=0.8,en;q=0.6&apos;,</span><br><span class="line">&apos;Cache-Control&apos;:&apos;no-cache&apos;,</span><br><span class="line">&apos;Connection&apos;:&apos;keep-alive&apos;,</span><br><span class="line">&apos;Content-Length&apos;:&apos;120&apos;,</span><br><span class="line">&apos;Content-Type&apos;:&apos;application/json&apos;,</span><br><span class="line">&apos;Cookie&apos;:&apos;&apos;,                             #input your cookie</span><br><span class="line">&apos;edu-script-token&apos;:&apos;&apos;,                   #input your token</span><br><span class="line">&apos;Host&apos;:&apos;study.163.com&apos;,</span><br><span class="line">&apos;Origin&apos;:&apos;http://study.163.com&apos;,</span><br><span class="line">&apos;Pragma&apos;:&apos;no-cache&apos;,</span><br><span class="line">&apos;Referer&apos;:&apos;http://study.163.com/courses&apos;,</span><br><span class="line">&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36&apos;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">payload= &#123;</span><br><span class="line">&quot;pageIndex&quot;:&apos;1&apos;,</span><br><span class="line">&quot;pageSize&quot;:&apos;50&apos;,</span><br><span class="line">&quot;relativeOffset&quot;:&apos;100&apos;,</span><br><span class="line">&quot;frontCategoryId&quot;:&apos;-1&apos;,</span><br><span class="line">&quot;searchTimeType&quot;:&apos;-1&apos;,</span><br><span class="line">&quot;orderType&quot;:&apos;0&apos;,</span><br><span class="line">&quot;priceType&quot;:&apos;-1&apos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Since this request is a Request Payload instead of Form Data, the header needs to be declared as json, and for a while the payload should be converted to json data.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">data_list = []</span><br><span class="line">count=0</span><br><span class="line">for i in range(60):</span><br><span class="line">    ret = requests.post(&quot;http://study.163.com/p/search/studycourse.json&quot;, data=json.dumps(payload), headers=header)</span><br><span class="line">    payload[&quot;pageIndex&quot;] = int(payload[&quot;pageIndex&quot;])+1</span><br><span class="line">    temp_dic = ret.json()</span><br><span class="line">    if temp_dic[&quot;message&quot;]!=&quot;ok&quot;:</span><br><span class="line">        print(&quot;error &quot;+temp_dic[&quot;message&quot;])</span><br><span class="line">    #data_list.append(temp_dic[&quot;result&quot;][&apos;list&apos;])</span><br><span class="line">    for item in temp_dic[&quot;result&quot;][&apos;list&apos;]:</span><br><span class="line">        count +=1</span><br><span class="line">        data_list.append(item)</span><br><span class="line">    print(i+1,&quot;/60&quot;)</span><br><span class="line">print(count)</span><br><span class="line"></span><br><span class="line">file_name=&apos;opencourse.json&apos;</span><br><span class="line">with open(file_name,&apos;w&apos;) as file_object:</span><br><span class="line">    json.dump(data_list,file_object)</span><br></pre></td></tr></table></figure></p>
+<p>According to the cloud classroom own data, just 3000 data, and then save the 3000 data first.<br>Then the first simple description of the title and introduction, use jieba Curry cut () method. The basic principle is to construct a dictionary using statistics Trie tree, and then construct the DAG, using dynamic programming to find the maximum probability combination. For words that are not in the dictionary, use HMM to divide them. code show as below:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import jieba</span><br><span class="line">word_count=&#123;&#125;</span><br><span class="line">for item in data_list:</span><br><span class="line">    temp_analyse = jieba.cut(item[&quot;productName&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        if word_count.get(temp) == None:</span><br><span class="line">            word_count[temp] = 1</span><br><span class="line">        else:</span><br><span class="line">            word_count[temp] = int(word_count[temp]) + 1</span><br><span class="line">    temp_analyse = jieba.cut(item[&quot;description&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        if word_count.get(temp) == None:</span><br><span class="line">            word_count[temp] = 1</span><br><span class="line">        else:</span><br><span class="line">            word_count[temp] = int(word_count[temp]) + 1</span><br></pre></td></tr></table></figure></p>
+<p>After sorting the dictionary, the 50 most frequent occurrences are as follows<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">sorted(word_count.items(),key=lambda item:item[1],reverse=True)</span><br><span class="line">x[0:50]</span><br><span class="line">Out[25]: </span><br><span class="line">[(&apos;,&apos;, 21836),</span><br><span class="line">  (&apos;\ n&apos;, 19297),</span><br><span class="line">  (&apos;S&apos;, 18876),</span><br><span class="line">  (&apos;&apos;, 15846),</span><br><span class="line">  (&apos;,&apos;, 9085),</span><br><span class="line">  (&apos;.&apos;, 8531),</span><br><span class="line">  (&apos;-&apos;, 6916),</span><br><span class="line">  (&apos;Courses&apos;, 5677),</span><br><span class="line">  (&apos;:&apos;, 5130),</span><br><span class="line">  (&apos;.&apos;, 4165),</span><br><span class="line">  (&apos;You&apos;, 3218),</span><br><span class="line">  (&apos;/&apos;, 2830),</span><br><span class="line">  (&apos;Learning&apos;, 2825),</span><br><span class="line">  (&apos;Yes&apos;, 2796),</span><br><span class="line">  (&apos;And&apos;, 2730),</span><br><span class="line">  (&apos;!&apos;, 2371),</span><br><span class="line">  (&apos;)&apos;, 2370),</span><br><span class="line">  (&apos;(&apos;, 2268),</span><br><span class="line">  (&apos;\ r \ n&apos;, 2268),</span><br><span class="line">  (&apos;At&apos;, 2149),</span><br><span class="line">  (&apos;-&apos;, 1967),</span><br><span class="line">  (&apos;Yes&apos;, 1711),</span><br><span class="line">  (&apos;Ben&apos;, 1690),</span><br><span class="line">  (&apos;And&apos;, 1633),</span><br><span class="line">  (&apos;&apos; &apos;, 1547),</span><br><span class="line">  (&apos;[&apos;, 1537),</span><br><span class="line">  (&apos;&quot;&apos;, 1521),</span><br><span class="line">  (&apos;&quot;&apos;, 1521),</span><br><span class="line">  (&apos;?&apos;, 1449),</span><br><span class="line">  (&apos;Basic&apos;, 1427),</span><br><span class="line">  (&apos;中&apos;, 1382),</span><br><span class="line">  (&apos;1&apos;, 1376),</span><br><span class="line">  (&apos;For&apos;, 1270),</span><br><span class="line">  (&apos;Yes&apos;, 1260),</span><br><span class="line">  (&apos;2&apos;, 1243),</span><br><span class="line">  (&apos;&quot;&apos;, 1233),</span><br><span class="line">  (&apos;&quot;&apos;, 1218),</span><br><span class="line">  (&apos;;&apos;, 1166),</span><br><span class="line">  (&apos;How,&apos; 1128),</span><br><span class="line">  (&apos;Yes&apos;, 1121),</span><br><span class="line">  (&apos;Let&apos;, 1082),</span><br><span class="line">  (&apos;Us&apos;, 1061),</span><br><span class="line">  (&apos;3&apos;, 1042),</span><br><span class="line">  (&apos;:&apos;, 1034),</span><br><span class="line">  (&apos;Tutorial&apos;, 1009),</span><br><span class="line">  (&apos;More&apos;, 1005),</span><br><span class="line">  (&apos;Et al&apos;, 999),</span><br><span class="line">  (&apos;Design&apos;, 981),</span><br><span class="line">  (&apos;Explain&apos;, 975),</span><br><span class="line">  (&apos;Video&apos;, 969)]</span><br></pre></td></tr></table></figure></p>
+<p>Visible pure word segmentation does not meet our needs, so we use TD-IDF and textrank algorithm directly to obtain key words. code show as below:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import jieba.analyse</span><br><span class="line">word_count=&#123;&#125;</span><br><span class="line">for item in data_list:</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(item[&quot;productName&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        if word_count.get(temp) == None:</span><br><span class="line">            word_count[temp] = 1</span><br><span class="line">        else:</span><br><span class="line">            word_count[temp] = int(word_count[temp]) + 1</span><br><span class="line">    temp_analyse = jieba.analyse.extract_tags(item[&quot;description&quot;])</span><br><span class="line">    for temp in temp_analyse:</span><br><span class="line">        if word_count.get(temp) == None:</span><br><span class="line">            word_count[temp] = 1</span><br><span class="line">        else:</span><br><span class="line">            word_count[temp] = int(word_count[temp]) + 1</span><br></pre></td></tr></table></figure></p>
+<p>The 40 most frequent occurrences of the word are as follows:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">[(&apos;Course&apos;, 1725),</span><br><span class="line">  (&apos;Learning&apos;, 717),</span><br><span class="line">  (&apos;Tutorial&apos;, 535),</span><br><span class="line">  (&apos;Basic&apos;, 471),</span><br><span class="line">  (&apos;Explain&apos;, 422),</span><br><span class="line">  (&apos;Getting Started&apos;, 389),</span><br><span class="line">  (&apos;Video&apos;, 372),</span><br><span class="line">  (&apos;http&apos;, 369),</span><br><span class="line">  (&apos;com&apos;, 351),</span><br><span class="line">  (&apos;Trick&apos;, 304),</span><br><span class="line">  (WeChat, 290),</span><br><span class="line">  (&apos;Actual Combat&apos;, 283),</span><br><span class="line">  (&apos;Making&apos;, 260),</span><br><span class="line">  (&apos;Teacher&apos;, 258),</span><br><span class="line">  (&apos;QQ&apos;, 248),</span><br><span class="line">  (&apos;Design&apos;, 247),</span><br><span class="line">  (&apos;How,&apos; 240),</span><br><span class="line">  (&apos;Development&apos;, 218),</span><br><span class="line">  (&apos;Trainee&apos;, 214),</span><br><span class="line">  (&apos;Mastery&apos;, 213),</span><br><span class="line">  (&apos;study&apos;, 211),</span><br><span class="line">  (&apos;Case&apos;, 201),</span><br><span class="line">  (&apos;163&apos;, 201),</span><br><span class="line">  (&apos;PPT&apos;, 199),</span><br><span class="line">  (&apos;Classroom&apos;, 197),</span><br><span class="line">  (&apos;10&apos;, 190),</span><br><span class="line">  (&apos;Update&apos;, 184),</span><br><span class="line">  (&apos;English&apos;, 179),</span><br><span class="line">  (&apos;Knowledge Point&apos;, 179),</span><br><span class="line">  (&apos;Workplace&apos;, 178),</span><br><span class="line">  (&apos;Video Tutorial&apos;, 177),</span><br><span class="line">  (&apos;Easy&apos;, 176),</span><br><span class="line">  (&apos;Excel&apos;, 163),</span><br><span class="line">  (&apos;PS&apos;, 162),</span><br><span class="line">  (&apos;Software&apos;, 158),</span><br><span class="line">  (&apos;Series&apos;, 156),</span><br><span class="line">  (&apos;Fast&apos;, 155),</span><br><span class="line">  (&apos;Management&apos;, 151),</span><br><span class="line">  (&apos;Exam&apos;, 142),</span><br><span class="line">  (&apos;Data&apos;, 142),</span><br><span class="line">  (&apos;Teaching&apos;, 139),</span><br><span class="line">  (&apos;htm&apos;, 138),</span><br><span class="line">  (&apos;Everyone&apos;, 138),</span><br><span class="line">  (&apos;Free&apos;, 137),</span><br><span class="line">  (&apos;Knowledge&apos;, 136),</span><br><span class="line">  (&apos;Course Content&apos;, 134),</span><br><span class="line">  (&apos;Use&apos;, 132),</span><br><span class="line">  (&apos;Hours&apos;, 129),</span><br><span class="line">  (&apos;Method&apos;, 128),</span><br><span class="line">  (&apos;www&apos;, 127)]</span><br></pre></td></tr></table></figure></p>
+<p>Due to the textrank code and the previous code is too repetitive, direct study jieba library on the line, the result is similar to the TD-IDF.<br>From the results, the simple TD-IDF and textrank algorithms can not meet our needs. Because of the high IDF value of ‘Courses’, ‘Learning’ is considered a key word relative to the ancillary word, combined with the high frequency of occurrence, so it appears in the first second place, but we prefer to get ‘Excel’ PS ‘Such a specific keyword, get the current study hot.<br>The next section uses cosine and hierarchical clustering to process the data.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/24/Internet-Principle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiafeng Shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeff's Homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/12/24/Internet-Principle/" itemprop="url">Internet Principle</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-24T05:44:23+08:00">
+                2016-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="COMP211"><a href="#COMP211" class="headerlink" title="COMP211"></a>COMP211</h1><h2 id="C1-roadmap"><a href="#C1-roadmap" class="headerlink" title="C1 : roadmap"></a>C1 : roadmap</h2><h3 id="Internet"><a href="#Internet" class="headerlink" title="Internet:"></a>Internet:</h3><ol>
+<li>millions of connected computing devices</li>
+<li>communication links</li>
+<li>Packet switches</li>
+</ol>
+<h3 id="protocols"><a href="#protocols" class="headerlink" title="protocols"></a>protocols</h3><p>control sending, receiving of msgs</p>
+<p><strong>protocols</strong> define <strong>format, order of msgs sent and received</strong><br>among network entities, and <strong>actions taken</strong> on msg transmission, receipt</p>
+<ul>
+<li>e.g., TCP, IP, HTTP, Skype, 802.11</li>
+</ul>
+<h3 id="Internet-standards"><a href="#Internet-standards" class="headerlink" title="Internet standards"></a>Internet standards</h3><ul>
+<li>RFC: Request for comments</li>
+<li>IETF: Internet Engineering Task Force<h3 id="Network-edge"><a href="#Network-edge" class="headerlink" title="Network edge"></a>Network edge</h3><h4 id="network-edge"><a href="#network-edge" class="headerlink" title="network edge:"></a>network edge:</h4>hosts: client and servers<h4 id="access-networks-physical-media"><a href="#access-networks-physical-media" class="headerlink" title="access networks, physical media:"></a>access networks, physical media:</h4>wired, wireless communication links<h4 id="network-core"><a href="#network-core" class="headerlink" title="network core:"></a>network core:</h4></li>
+<li>interconnected routers </li>
+<li>network of networks<h4 id="Access-net-digital-subscriber-line-DSL"><a href="#Access-net-digital-subscriber-line-DSL" class="headerlink" title="Access net: digital subscriber line (DSL)"></a>Access net: digital subscriber line (DSL)</h4>voice, data transmitted at different frequencies over <strong>dedicated</strong> line to central office</li>
+</ul>
+<p>use existing telephone line to central office DSLAM(DSL access multiplexer)</p>
+<ul>
+<li>data goes to Internet</li>
+<li>voic goes to telephone net</li>
+<li>&lt; 2.5 Mbps upstream transmission rate (typically &lt; 1 Mbps)</li>
+<li>&lt; 24 Mbps downstream transmission rate (typically &lt; 10 Mbps)</li>
+</ul>
+<h4 id="Access-net-cable-network"><a href="#Access-net-cable-network" class="headerlink" title="Access net: cable network"></a>Access net: cable network</h4><p>frequency division multiplexing: different channels transmitted in different frequency bands</p>
+<p>HFC: hybrid fiber coax</p>
+<ul>
+<li>30Mbps downstream</li>
+<li>2Mbps unpstream</li>
+</ul>
+<p>network of cable, fiber attaches homes to ISP router</p>
+<ul>
+<li>homes <strong>share access network</strong> to cable headend</li>
+</ul>
+<h4 id="Access-net-home-network"><a href="#Access-net-home-network" class="headerlink" title="Access net: home network"></a>Access net: home network</h4><p>wireless aceess point+ router + cable or DSL modem</p>
+<h4 id="Enterprise-access-networks-Ethernet"><a href="#Enterprise-access-networks-Ethernet" class="headerlink" title="Enterprise access networks (Ethernet)"></a>Enterprise access networks (Ethernet)</h4><p>today, end systems typically connect into Ethernet switch</p>
+<h4 id="wireless-LANs"><a href="#wireless-LANs" class="headerlink" title="wireless LANs:"></a>wireless LANs:</h4><ul>
+<li>within building (100 ft)</li>
+<li>802.11b/g (WiFi): 11, 54 Mbps<br>transmission rate<h4 id="wide-area-wireless-access"><a href="#wide-area-wireless-access" class="headerlink" title="wide-area wireless access"></a>wide-area wireless access</h4></li>
+<li>provided by telco (cellular) operator, 10’s km</li>
+<li>between 1 and 10 Mbps </li>
+<li>3G,4G: LTE</li>
+</ul>
+<h4 id="packet-transmission-delay"><a href="#packet-transmission-delay" class="headerlink" title="packet transmission delay"></a>packet transmission delay</h4><p>packet transmission delay = length of packets / transmission rate</p>
+<h4 id="packet-delay"><a href="#packet-delay" class="headerlink" title="packet delay:"></a>packet delay:</h4><ol>
+<li>nodal processing(check bit error)</li>
+<li>queueing delay</li>
+<li>transmission delay</li>
+<li>propagation delay</li>
+</ol>
+<h4 id="Throughput"><a href="#Throughput" class="headerlink" title="Throughput"></a>Throughput</h4><p>throughput: rate (bits/time unit) at which bits transferred between sender/receiver</p>
+<ul>
+<li>instantaneous: rate at given point in time </li>
+<li>average: rate over longer period of time</li>
+</ul>
+<h2 id="C2-Application-Layer"><a href="#C2-Application-Layer" class="headerlink" title="C2 : Application Layer"></a>C2 : Application Layer</h2><h3 id="Application-architectures"><a href="#Application-architectures" class="headerlink" title="Application architectures"></a>Application architectures</h3><ul>
+<li>client-server</li>
+<li>peer-to-peer (P2P)<h3 id="Processes-communicating"><a href="#Processes-communicating" class="headerlink" title="Processes communicating"></a>Processes communicating</h3></li>
+<li>within same host, two processes communicate using <strong>inter-process communication</strong> (defined by OS)</li>
+<li>processes in different hosts communicate by exchanging <strong>messages</strong></li>
+</ul>
+<h3 id="Addressing-processes"><a href="#Addressing-processes" class="headerlink" title="Addressing processes"></a>Addressing processes</h3><ul>
+<li>to receive messages, process must have <strong>identifier</strong></li>
+<li>identifier includes both <strong>IP address</strong> and <strong>port numbers</strong> associated with process on host.</li>
+<li>HTTP server: 80</li>
+<li><p>mail server: 25</p>
+<h3 id="App-layer-protocol-defines"><a href="#App-layer-protocol-defines" class="headerlink" title="App-layer protocol defines"></a>App-layer protocol defines</h3><p>types of messages exchanged, e.g., request, response<br>open protocols:</p>
+</li>
+<li><p>defined in RFCs</p>
+</li>
+<li>allows for interoperability </li>
+<li>e.g., HTTP, SMTP</li>
+</ul>
+<h3 id="What-transport-service-does-an-app-need"><a href="#What-transport-service-does-an-app-need" class="headerlink" title="What transport service does an app need"></a>What transport service does an app need</h3><ol>
+<li>data integrity</li>
+<li>throughput</li>
+<li>timing</li>
+<li>security</li>
+</ol>
+<h4 id="TCP-service"><a href="#TCP-service" class="headerlink" title="TCP service:"></a>TCP service:</h4><p>provide: reliable transport, flow control, congestion control, connection-oriented.<br>dont provide: timing, minium throughput guarantee, security</p>
+<h4 id="securing-TCP-SSL"><a href="#securing-TCP-SSL" class="headerlink" title="securing TCP: SSL"></a>securing TCP: SSL</h4><p>provides encrypted TCP connection, data integrity, end-point authentication</p>
+<p>It is at app layer</p>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>hypertext transfer protocol</p>
+<ul>
+<li>HTTP/1.0: RFC 1945 </li>
+<li>HTTP/1.1: RFC 2068</li>
+</ul>
+<p>uses TCP</p>
+<p>HTTP is “stateless”</p>
+<ul>
+<li>server maintains no information about past client requests</li>
+</ul>
+<h4 id="HTTP-connections"><a href="#HTTP-connections" class="headerlink" title="HTTP connections"></a>HTTP connections</h4><p>non-persistent HTTP:</p>
+<ul>
+<li>at most one object sent over TCP connection<ul>
+<li>connection then closed</li>
+</ul>
+</li>
+<li>downloading multiple objects required multiple connections</li>
+<li>HTTP/1.0 uses non- persistent HTTP</li>
+</ul>
+<p><strong>RTT (definition)</strong>: time for a small packet to travel from client to server and back</p>
+<p><strong>HTTP response time</strong>:</p>
+<p>one RTT to initiate TCP connection<br>one RTT for HTTP request and first few bytes of HTTP response to return<br>file transmission time<br><strong>non-persistent HTTP response time =<br>2RTT+ file transmission time</strong></p>
+<h5 id="Issue"><a href="#Issue" class="headerlink" title="Issue:"></a>Issue:</h5><ul>
+<li>requires 2 RTTs per object </li>
+<li>OS overhead for each TCP connection</li>
+<li>browsers often open parallel TCP connections to fetch referenced objects</li>
+</ul>
+<p>persistent HTTP:</p>
+<ul>
+<li>multiple objects can be sent over single TCP connection between client, server</li>
+<li>HTTP/1.1 uses persistent connections in default mode</li>
+</ul>
+<h3 id="HTTP-requesrt-message"><a href="#HTTP-requesrt-message" class="headerlink" title="HTTP requesrt message"></a>HTTP requesrt message</h3><ul>
+<li>two types of HTTP messages: request, response </li>
+<li>HTTP request message: ASCII (human-readable format)</li>
+</ul>
+<h3 id="Uploading-form-input"><a href="#Uploading-form-input" class="headerlink" title="Uploading form input"></a>Uploading form input</h3><p>POST method:</p>
+<ul>
+<li>web page often includes form input</li>
+<li>input is uploaded to server in entity body</li>
+</ul>
+<p>URL method:</p>
+<ul>
+<li>uses GET method</li>
+<li>input is uploaded in URL<br>field of request line:</li>
+</ul>
+<h4 id="status-codes"><a href="#status-codes" class="headerlink" title="status codes"></a>status codes</h4><p>200 OK</p>
+<ul>
+<li>request succeeded, requested object later in this msg<br>301 Moved Permanently</li>
+<li>requested object moved, new location specified later in this msg (Location: )<br>400 Bad Request</li>
+<li>request msg not understood by server<br>404 Not Found</li>
+<li>requested document not found on this server<br>505 HTTP Version Not Supported</li>
+</ul>
+<h3 id="cookies"><a href="#cookies" class="headerlink" title="cookies"></a>cookies</h3><ol>
+<li>unique ID</li>
+<li>entry in backend database for ID</li>
+</ol>
+<p>4 components:</p>
+<ol>
+<li>cookie header line of HTTP response message</li>
+<li>cookie header line in next HTTP request message</li>
+<li>cookie file kept on user’s host, managed by user’s browser</li>
+<li>back-end database at Web site</li>
+</ol>
+<h3 id="Electronic-mail"><a href="#Electronic-mail" class="headerlink" title="Electronic mail"></a>Electronic mail</h3><p>3 major components:</p>
+<ol>
+<li>user agents</li>
+<li>mail servers</li>
+<li>simple mail transfer protocol: SMTP(port 25)</li>
+</ol>
+<p>SMTP: <strong>delivery/storage</strong> to receiver’s server</p>
+<p>mail <strong>access</strong> protocol: <strong>retrieval from server</strong></p>
+<ul>
+<li>POP: Post Office Protocol [RFC 1939]: authorization, download(authorization phase, transaction phase)</li>
+<li>IMAP: Internet Mail Access Protocol [RFC 1730]: more features, including manipulation of stored msgs on server</li>
+<li>HTTP: gmail, Hotmail, Yahoo! Mail, etc.</li>
+</ul>
+<h3 id="Domain-Name-System"><a href="#Domain-Name-System" class="headerlink" title="Domain Name System"></a>Domain Name System</h3><ul>
+<li>distributed, hierarchical database</li>
+<li>application-layer protocol</li>
+</ul>
+<h4 id="DNS-records"><a href="#DNS-records" class="headerlink" title="DNS records"></a>DNS records</h4><p>types:<br>A, CNAME, NS, MX</p>
+<h2 id="C3"><a href="#C3" class="headerlink" title="C3"></a>C3</h2><h3 id="Transport-service"><a href="#Transport-service" class="headerlink" title="Transport service"></a>Transport service</h3><p>break app messages into segments</p>
+<h3 id="Reliable-Data-Transfer"><a href="#Reliable-Data-Transfer" class="headerlink" title="Reliable Data Transfer"></a>Reliable Data Transfer</h3><h4 id="rdt1-0"><a href="#rdt1-0" class="headerlink" title="rdt1.0:"></a>rdt1.0:</h4><p>reliable transfer over a reliable channel</p>
+<ul>
+<li>no bit errors</li>
+<li>no loss of packets</li>
+</ul>
+<h4 id="rdt2-0"><a href="#rdt2-0" class="headerlink" title="rdt2.0:"></a>rdt2.0:</h4><p>channel with bit errors</p>
+<p>use ACK and NAK</p>
+<p>has a fatal flaw(ACK/NAK corrupted)</p>
+<h4 id="rdt2-1"><a href="#rdt2-1" class="headerlink" title="rdt2.1:"></a>rdt2.1:</h4><p>sender, handles garbled ACK/NAKs</p>
+<p>add seq</p>
+<h4 id="rdt2-2"><a href="#rdt2-2" class="headerlink" title="rdt2.2:"></a>rdt2.2:</h4><p>a NAK-free protocol</p>
+<p>seq replace NAK</p>
+<h4 id="rdt3-0"><a href="#rdt3-0" class="headerlink" title="rdt3.0:"></a>rdt3.0:</h4><p>channels with errors and loss</p>
+<h4 id="Pipelined-protocols"><a href="#Pipelined-protocols" class="headerlink" title="Pipelined protocols"></a>Pipelined protocols</h4><p>range of sequence numbers must be increased</p>
+<p>buffering at sender and/or receiver</p>
+<p>two generic forms of pipelined protocols: <strong>go-Back-N, selective repeat</strong></p>
+<h4 id="GBN"><a href="#GBN" class="headerlink" title="GBN"></a>GBN</h4><p>Buffering in sender, not in receiver</p>
+<h4 id="selective-repeat"><a href="#selective-repeat" class="headerlink" title="selective repeat:"></a>selective repeat:</h4><h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><h4 id="flow-control"><a href="#flow-control" class="headerlink" title="flow control"></a>flow control</h4><p>receiver controls sender, so sender won’t overflow receiver’s buffer by transmitting too much, too fast</p>
+<h4 id="hand-shake-important"><a href="#hand-shake-important" class="headerlink" title="hand shake(important)"></a>hand shake(important)</h4><p>3-way handshake</p>
+<p>closing connection</p>
+<h4 id="congestion-control"><a href="#congestion-control" class="headerlink" title="congestion control"></a>congestion control</h4><p>two broad approaches towards congestion control:</p>
+<ol>
+<li>end-end congestion network-assisted<br>￼control(ABR, available bit rate)</li>
+<li>network-assisted congestion control(RM, resource management)</li>
+</ol>
+<p><strong>approach:</strong></p>
+<ul>
+<li>additive increase: increase cwnd by 1 MSS every RTT until loss detected</li>
+<li>multiplicative decrease: cut cwnd in half after loss<h2 id="C8"><a href="#C8" class="headerlink" title="C8"></a>C8</h2><h3 id="network-security"><a href="#network-security" class="headerlink" title="network security"></a>network security</h3>Confidentiality, Authentication, Message Integrity, Access and Availability</li>
+</ul>
+<h3 id="Caesar-cipher"><a href="#Caesar-cipher" class="headerlink" title="Caesar cipher"></a>Caesar cipher</h3><p>a substitution cipher</p>
+<p>alphabet shift</p>
+<p>25 possible keys</p>
+<p>easy to compute the corresponding plaintext</p>
+<h3 id="Symmetric-key-cryptography"><a href="#Symmetric-key-cryptography" class="headerlink" title="Symmetric key cryptography"></a>Symmetric key cryptography</h3><h4 id="Monoalphabetic-cipher"><a href="#Monoalphabetic-cipher" class="headerlink" title="Monoalphabetic cipher"></a>Monoalphabetic cipher</h4><p>Substitute one letter for another</p>
+<ul>
+<li>Similar to Caesar’s, except no fixed pattern of<br>substitution</li>
+<li>The key is a one-to-one mapping between letters<br>26! different pairings<br>Use statistical analysis, e.g. ‘e’ and ‘t’ account for 13% and 9% of letter occurrences respectively</li>
+</ul>
+<h4 id="Breaking-Encryption"><a href="#Breaking-Encryption" class="headerlink" title="Breaking Encryption"></a>Breaking Encryption</h4><p>Cipher-text only attack<br>Known-plaintext attck<br>Chosen-plaintext attack</p>
+<h4 id="Polyalphabetic-encryption"><a href="#Polyalphabetic-encryption" class="headerlink" title="Polyalphabetic encryption"></a>Polyalphabetic encryption</h4><p>n monoalphabetic cyphers, M1,M2,…,Mn </p>
+<p>Cycling pattern:</p>
+<ul>
+<li>e.g., for n=4: M1,M3,M4,M3,M2; M1,M3,M4,M3,M2;<h4 id="Two-types-of-symmetric-ciphers"><a href="#Two-types-of-symmetric-ciphers" class="headerlink" title="Two types of symmetric ciphers"></a>Two types of symmetric ciphers</h4>Block ciphers(Message to be encrypted is processed in blocks of k bits)<br>Stream ciphers(encrypt one bit at time)</li>
+</ul>
+<h4 id="Cipher-Block-Chaining-CBC"><a href="#Cipher-Block-Chaining-CBC" class="headerlink" title="Cipher Block Chaining (CBC)"></a>Cipher Block Chaining (CBC)</h4><p>to handle encrypting a large message<br>CBC generates its own random numbers</p>
+<ul>
+<li>Have encryption of current block depend on result of previous<br>block</li>
+<li>c(i) = KS( m(i) ⊕ c(i-1) )</li>
+<li>m(i) = KS( c(i)) ⊕ c(i-1)<h4 id="DES-Data-Encryption-Standard"><a href="#DES-Data-Encryption-Standard" class="headerlink" title="DES(Data Encryption Standard)"></a>DES(Data Encryption Standard)</h4>56 bit key<h3 id="Public-Key-Cryptography"><a href="#Public-Key-Cryptography" class="headerlink" title="Public Key Cryptography"></a>Public Key Cryptography</h3></li>
+</ul>
+<ol>
+<li>Choose two large prime numbers p, q.<br>(e.g., 1024 bits each)</li>
+<li>Compute n = pq, z = (p-1)(q-1)</li>
+<li>Choose e (with e&lt;n) that has no common factors with z. (e, z are “relatively prime”).</li>
+<li>Choose d such that ed-1 is exactly divisible by z. (inotherwords:edmodz =1).</li>
+</ol>
+<h3 id="Digital-signatures"><a href="#Digital-signatures" class="headerlink" title="Digital signatures"></a>Digital signatures</h3><h4 id="pretty-good-privacy-PGP"><a href="#pretty-good-privacy-PGP" class="headerlink" title="pretty good privacy(PGP)"></a>pretty good privacy(PGP)</h4><p>use 3 keys to encrypt email</p>
+<h4 id="Secure-Socket-Layer"><a href="#Secure-Socket-Layer" class="headerlink" title="Secure Socket Layer"></a>Secure Socket Layer</h4><p>the same as PGP</p>
+<h3 id="WEP"><a href="#WEP" class="headerlink" title="WEP"></a>WEP</h3><h2 id="C4"><a href="#C4" class="headerlink" title="C4"></a>C4</h2><h3 id="Two-key-network-layer-functions"><a href="#Two-key-network-layer-functions" class="headerlink" title="Two key network-layer functions"></a>Two key network-layer functions</h3><p>forwarding: move packets from router’s input to appropriate router output<br>routing: determine route taken by packets from source to dest.<br>3rd function: Connection setup.<br>network vs transport layer connection service:</p>
+<ul>
+<li>network: between two hosts (may also involve intervening<br>routers in case of VCs)</li>
+<li>transport: between two processes</li>
+</ul>
+<p>datagram network provides network-layer connectionless service(Internet)<br>virtual-circuit network provides network-layer connection service(ATM)</p>
+<h3 id="VC-implementation"><a href="#VC-implementation" class="headerlink" title="VC implementation"></a>VC implementation</h3><p>a VC consists of:</p>
+<ol>
+<li>path from source to destination</li>
+<li>VC numbers, one number for each link along path </li>
+<li>entries in forwarding tables in routers along path<h3 id="longest-prefix-matching"><a href="#longest-prefix-matching" class="headerlink" title="longest prefix matching"></a>longest prefix matching</h3>when looking for forwarding table entry for given destination address, use longest address prefix that matches destination address.<h3 id="subnet"><a href="#subnet" class="headerlink" title="subnet"></a>subnet</h3></li>
+</ol>
+<ul>
+<li>device interfaces with same subnet part of IP address</li>
+<li><p>can physically reach each other <strong>without intervening router</strong><br>recipe</p>
+</li>
+<li><p>to determine the subnets, detach each interface from its host or router, creating islands of isolated networks</p>
+</li>
+<li>each isolated network is called a subnet<h3 id="Classless-InterDomain-Routing-CIDR"><a href="#Classless-InterDomain-Routing-CIDR" class="headerlink" title="Classless InterDomain Routing(CIDR)"></a>Classless InterDomain Routing(CIDR)</h3></li>
+<li>subnet portion of address of arbitrary length</li>
+<li>address format: a.b.c.d/x, where x is # bits in subnet portion of address<h3 id="Way-to-get-IP-address"><a href="#Way-to-get-IP-address" class="headerlink" title="Way to get IP address"></a>Way to get IP address</h3></li>
+</ul>
+<ol>
+<li>hard-coded by system admin in a file</li>
+<li>DHCP: Dynamic Host Configuration Protocol:<br>dynamically get address from a server<h4 id="DHCP"><a href="#DHCP" class="headerlink" title="DHCP"></a>DHCP</h4><h4 id="IPv6-motivation"><a href="#IPv6-motivation" class="headerlink" title="IPv6: motivation"></a>IPv6: motivation</h4></li>
+</ol>
+<ul>
+<li>fixed-length 40 byte header </li>
+<li>no fragmentation allowed<br>tunneling: IPv6 datagram carried as<strong> payload</strong> in IPv4<br>￼datagram among IPv4 routers</li>
+</ul>
+<h3 id="Intra-AS-Routing"><a href="#Intra-AS-Routing" class="headerlink" title="Intra-AS Routing"></a>Intra-AS Routing</h3><ul>
+<li>also known as interior gateway protocols (IGP) </li>
+<li>most common intra-AS routing protocols:<ul>
+<li>RIP: Routing Information Protocol</li>
+<li>OSPF: Open Shortest Path First</li>
+<li>IGRP: Interior Gateway Routing Protocol (Cisco proprietary)</li>
+</ul>
+</li>
+</ul>
+<h2 id="C5-6"><a href="#C5-6" class="headerlink" title="C5/6"></a>C5/6</h2><h3 id="link-layer"><a href="#link-layer" class="headerlink" title="link layer"></a>link layer</h3><p>link layer implemented in adaptor(network interface card NIC)</p>
+<ul>
+<li>Ethernet card, 802.11 card; Ethernet chipset</li>
+<li>implements link, physical layer<br>attaches into host’s system buses<br>combination of hardware, software, firmware<h3 id="Error-detection"><a href="#Error-detection" class="headerlink" title="Error detection"></a>Error detection</h3>EDC= Error Detection and Correction bits (redundancy)<br>D = Data protected by error checking, may include header fields<h4 id="Parity-checking"><a href="#Parity-checking" class="headerlink" title="Parity checking"></a>Parity checking</h4>single bit parity: </li>
+</ul>
+<p>detect single bit errors</p>
+<p>two-dimensional bit parity:<br>detect and <strong>correct</strong> single bit errors</p>
+<h4 id="Cyclic-redundancy-check"><a href="#Cyclic-redundancy-check" class="headerlink" title="Cyclic redundancy check"></a>Cyclic redundancy check</h4><h3 id="two-types-of-“links”"><a href="#two-types-of-“links”" class="headerlink" title="two types of “links”"></a>two types of “links”</h3><p>point-to-point</p>
+<p>broadcast (shared wire or medium)</p>
+<h3 id="multiple-access-protocol"><a href="#multiple-access-protocol" class="headerlink" title="multiple access protocol"></a>multiple access protocol</h3><p>distributed algorithm that determines how nodes share channel, i.e., determine when node can transmit</p>
+<h3 id="MAC-protocol"><a href="#MAC-protocol" class="headerlink" title="MAC protocol"></a>MAC protocol</h3><p>channel partitioning(divided into time slots, frequency, code)</p>
+<p>random access</p>
+<p>“taking turns”</p>
+<h3 id="MAC-addresses"><a href="#MAC-addresses" class="headerlink" title="MAC addresses"></a>MAC addresses</h3><p>ip: network-layer address for interface<br>MAC address: function: used ‘locally” to get frame from one interface to another physically-connected interface (same network, in IP- addressing sense)<br>48 bit MAC address (for most LANs) burned in NIC ROM, also sometimes software settable</p>
+<h3 id="ARP-table"><a href="#ARP-table" class="headerlink" title="ARP table"></a>ARP table</h3><p>ARP table: each IP node (host, router) on LAN has table<br>(IP/MAC address mappings)<br>TTL(Time To Live): typically 20 min forgotten</p>
+<h3 id="Ethernet"><a href="#Ethernet" class="headerlink" title="Ethernet"></a>Ethernet</h3><p>unreliable, connectionless</p>
+<h4 id="Ethernet-switch"><a href="#Ethernet-switch" class="headerlink" title="Ethernet switch"></a>Ethernet switch</h4><p>link-layer device: takes an active role</p>
+<ul>
+<li>store, forward Ethernet frames<br>transparent<br>plug-and-play, self-learning<h2 id="C7"><a href="#C7" class="headerlink" title="C7"></a>C7</h2></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/24/Database-Notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiafeng Shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeff's Homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/11/24/Database-Notes/" itemprop="url">Database Notes</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-24T05:42:27+08:00">
+                2016-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Database-Development-Review"><a href="#Database-Development-Review" class="headerlink" title="Database Development Review"></a>Database Development Review</h1><hr>
+<p>###Lecture 2</p>
+<p>####System Development Life Cycle:<br>Project Initiation<br><br>Feasibility Study<br><br>System Analysis<br><br>System Design<br><br>Evalution and Maintenance<br></p>
+<p>####Transaction Concept:<br>Transaction is an executing program. often comprising several queries    </p>
+<p>A logical unit of processing useing access operations</p>
+<p>It can be submitted interactively or embedded whin another programming language (or consider SQL statements as transaction operations)  </p>
+<p>It leaves the DB in a valid or consistent state - enforced using <strong>ACID</strong> properties  </p>
+<p>2 <strong><em>outcome</em></strong>: Commit, Abort</p>
+<p>ACID:</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -379,50 +1640,58 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="Jeffer" />
-          <p class="site-author-name" itemprop="name">Jeffer</p>
-          <p class="site-description motion-element" itemprop="description">Jeffer's universe weighs 5 kg</p>
-        </div>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">posts</span>
-            </a>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jiafeng Shou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">Artikel</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
           </div>
 
           
+          
+
+          
+          
 
           
 
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
         </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
+
+      
 
       
 
@@ -436,38 +1705,48 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2016</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Jeffer</span>
+  <span class="author" itemprop="copyrightHolder">Jiafeng Shou</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
-</div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
 
 
         
+
+
+
+
+
+
 
         
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
@@ -487,6 +1766,15 @@
 
 
   
+
+
+
+
+
+
+
+
+
 
 
 
@@ -512,26 +1800,25 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
 
   
+  
 
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
 
 
   
@@ -544,8 +1831,27 @@
 
 
 
+
   
+
+
+
+
+
   
+
+
+
+
+
+
+
+
+  
+
+
+
+
 
   
 
@@ -555,6 +1861,9 @@
 
   
 
+  
+
+  
 
 </body>
 </html>

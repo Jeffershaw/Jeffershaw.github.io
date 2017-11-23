@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Prediction of Industrial Data with filtrationAbstract — the prediction of the industrial data can intensify the control ability of the industrial machine, which">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Prediction of Industrial Data with filtration">
+<meta property="og:url" content="http://yoursite.com/2017/11/24/Prediction-of-Industrial-Data-with-filtration/index.html">
+<meta property="og:site_name" content="Jeff&#39;s Homepage">
+<meta property="og:description" content="Prediction of Industrial Data with filtrationAbstract — the prediction of the industrial data can intensify the control ability of the industrial machine, which can adjust the speed according the pred">
+<meta property="og:updated_time" content="2017-11-23T22:13:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Prediction of Industrial Data with filtration">
+<meta name="twitter:description" content="Prediction of Industrial Data with filtrationAbstract — the prediction of the industrial data can intensify the control ability of the industrial machine, which can adjust the speed according the pred">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/24/Prediction-of-Industrial-Data-with-filtration/"/>
+
+
+
+
+
+  <title>Prediction of Industrial Data with filtration | Jeff's Homepage</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Jeff's Homepage</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/24/Prediction-of-Industrial-Data-with-filtration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jiafeng Shou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Jeff's Homepage">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Prediction of Industrial Data with filtration</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-24T06:10:41+08:00">
+                2017-11-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Prediction-of-Industrial-Data-with-filtration"><a href="#Prediction-of-Industrial-Data-with-filtration" class="headerlink" title="Prediction of Industrial Data with filtration"></a>Prediction of Industrial Data with filtration</h2><p><em>Abstract</em> — the prediction of the industrial data can intensify the control ability of the industrial machine, which can adjust the speed according the prediction results. We propose a novel prediction algorithm for industrial data prediction using a classifier, which can strip fluctuating data from a large amount of stable data that increase the accuracy of the forecasting and shorten the training time. We have tested the algorithm using 100, 000 data of diameter of wires as the test set. Experimental results show that our novel prediction algorithm can significantly improve the prediction accuracy and has better performance than LSTM-RNN, LSTM-RNN-dropout and LSTM-RNN-BN algorithms.</p>
+<p><em>Keywords</em> — <em>industrial data prediction; classifier; lstm-rnn; dropout, batch normalization; anomaly data filteration</em></p>
+<ol>
+<li>I.INTRODUCTION</li>
+</ol>
+<p>The industrial data is collected from a machine which manufactures wires. Diameter monitoring sensors are remotely deployed in the manufactures they are monitoring. Therefore, the diameters of the wire and other data such as current will be transmitted to the collectors continuously. Because sensors operate in a complex manufacturing environment such as the fluctuation of current, the diversification of the temperature, the rotation speed of the machine, there is a great probability that there are a large amount of corrupted data in the collected data. Therefore, the pre-process of the collected data is necessary before the training procedure. However, we also used the unprocessed data for training as a comparison. After the preprocessing, we need to get the prediction that is intends to tell the machine trend of the wire&#39;s diameter which is decreasing or increasing.</p>
+<p> Varies of applications use prediction algorithms to set up a model from a dataset to get the future trend of the data. There are several prediction algorithms proposed in recent years. Support Vector Machine is one of the most popular methodologies in prediction. S. Hirose proposed a two-level SVM prediction system for reliably predicting long disordered regions [1]. SVM-based prediction of linear B-cell epitopes using Bayes Feature Extraction was proposed by Lawrence JK Wee [2]. However, SVM is a time complexity algorithm when the dataset is very large and not very suitable for industrial application. Recurrent neural network is another algorithm used for data prediction. On this basis, the improved Long Short Term Memory algorithm is very effective for long sequence dependency problems.</p>
+<p> This study develops a LSTM-RNN model with a classifier for industrial data prediction. And we also compared the prediction result of several different algorithms which includes 1-layer lstm-rnn, 2-layer lstm-rnn, 2-layer lstm-rnn with dropout method, 2-layer lstm-rnn with recurrent batch normalization method and lstm-rnn with a classifier. We discuss the basic methodology in Section and use a industrial dataset to verify the basic algorithms in Section3. After that, we proposed a lstm-rnn-classifier to improve the prediction accuracy through a case study. In the last section, we make a conclusion and propose our future work.</p>
+<ol>
+<li>II.Basic Conceptions<ol>
+<li>A.Long Short Term Memory</li>
+</ol>
+</li>
+</ol>
+<p>The long short-term memory (LSTM) model was proposed in 1997 by Sepp Hoch Reiter and Jürgen Schumacher [3]. This model solves gradient vanish problem in the recurrent neural network (RNN) by importing cell and gates. The basic architecture of LSTM is shown in the figure 1. [4]</p>
+<p>The LSTM model controls forget rate of the last status by forget gate:</p>
+<p>Wσ(fxxt+Wfhht−1+bf)ft=</p>
+<p>which is decided by current input xt<br> and last hidden state<br>ht−1<br>. The current input would be controlled by input gate:</p>
+<p>it=σ(Wixxt+Wihht−1+bi)<br>                (2)</p>
+<p>which decides how much of current input can flow into cell. The output is controlled by output gate:</p>
+<p>ot=σ(Woxxt+Wohht−1+bo)</p>
+<p>which decides how much of the hidden states can flow into next status. Then input should be activated by activation function:</p>
+<p>c~t=tanh(Wcxxt+Wchht−1+bc)<br>                (4)</p>
+<p>where  c~t<br> stands for the intermediate addition to cell. Finally, the cell and hidden state would update the value by the gate:</p>
+<p>ct=ft∗ct−1+c~t∗it</p>
+<p>ht=ot∗tanh(ct)<br>                                        (6)</p>
+<p>where ct<br> is the current cell state and<br>ht<br> is the current hidden state that are delivering to next state.</p>
+<p>Since the study aims to predict a sequent value in next second, the model would be sequence to sequence, which receives a sequence as parameter and generates a sequence as output.</p>
+<p>1.</p>
+<ol>
+<li>B.Dropout Layer</li>
+</ol>
+<p>In the neural network&#39;s training, adding dropout layer in the hidden layer or full connect layer could prevent neural networks from overfitting. Dropout can be interpreted as a way of regularizing a neural network by adding noise to its hidden units [5]. That leads to less dependency between neurons in different layers. Dropout is not only applied in NN and CNN, but it is also proved that in RNN, a higher recurrent layer dropout probability leads to increased probability to overfitting [5][6].</p>
+<p>In this study, a prediction without overfitting is expected. Therefore, dropout would be applied in the hidden layer.</p>
+<p>1.</p>
+<ol>
+<li>C.Recurrent Batch Normalization</li>
+</ol>
+<p>The training cost of large dataset of Recurrent Neural Network is hard to decrease if the number of nodes and layers is large. The time we train on the server takes a whole day or more. In order to reduce training time, there are two ways, which are using GPU instead of CPU or accelerating conditioned optimization procedures. Batch normalization has been firstly proposed as a better optimization method for FNN or CNNs. After that, Cesar Laurent proposed the Recurrent Batch Normalization for RNNs which showed that the training time can be reduced.</p>
+<p>In order to reduce the internal covariate shift, the whiten procedure could be applied to each layer of the network. Batch normalization approximates the whitening by standardizing the intermediate representations using the statistics of the current mini-batch. The sample mean and sample variance of each feature <em>k</em> can be calculated by given a mini-batch X,</p>
+<p>x&#39;=1m∑i=1mxi,k<br>                                        (7)</p>
+<p>σk2=1m∑i=1m(xi,k−x&#39;k)2<br>                (8)</p>
+<p>Where <em>m</em> is the size of mini-batch. Each feature can be standardized as follows</p>
+<p>x&#39;k=xk−x&#39;kσk2+ϵ<br>                                                (9)</p>
+<p>where ϵ<br> is a small positive constant to improve numerical stability. After the scale and shift, we can get the optimization result.</p>
+<p>yk←γx&#39;k+β≡BNγ,β(xi)</p>
+<p>Where γ<br> and<br>β<br> is the learnable parameters, which respectively scale and shift the data.</p>
+<p>ht=∅(BN(Whht−1+Wxxt))</p>
+<p>Where ∅<br> is the activation function, W is the weights matrix,<br>ht<br> is the current state result and<br>ht−1<br> is the last state result.</p>
+<p>We set the BN between the hidden layer and the output layer.</p>
+<p>1.</p>
+<ol>
+<li>D.One-hot encoding</li>
+</ol>
+<p>In the case study, the result shows that the former model does not work in the prediction. There are two factors: single dimension input and large range of stable values.</p>
+<p>For the single dimension issue, one appropriate way to raise the dimension is using one-hot encoding, which is popular in natural language processing. The definition of one-hot encoding is a group of bits among which the legal combinations of values are only those with single high (1) bit and all the others low (0) [7].</p>
+<p>The idea is that there would be (2+n)<br> bits. The figure could be found in Figure 3. Each bit in the<br>n<br> stands for an interval lasting 0.03. All<br>n<br> bits would be in the qualified range. Any value beyond the range would be the other 2 bits. There is the example for value from 1.85-2.02.</p>
+<p>Therefore, the input of 1.864 would be [0,1,0,0,0]<br> etc.</p>
+<p>The input and output should be discrete value, not an interval. However, since the study focus on the prediction of tendency, the accurate discrete value is not required. Therefore, the tradeoff between dimension and accuracy could be accepted.</p>
+<p>1.</p>
+<ol>
+<li>E.Classification and Fitting</li>
+</ol>
+<p>The large range of stable value would make training hard. The first reason is that the amount of neuron is not enough to support fitting a curve, which contains thousands of points. Once adding the amount of neuron is token, the increment in training and calculation is unacceptable. The second reason is that the amount of fluctuating points is small while comparing with the whole data. The data of experiment shows that there is 95% stable data. In the training, the small number of fluctuating points would be regarded as anomaly, which would be ignored by small neuron networks. That leads to fitting as a horizontal line whose value is close to the mean value of data. Since the mean value line has the minimal error, the result is reasonable.</p>
+<p>To lessen the influence of stable value, a classification and fitting model is proposed. The idea is that filter all stable value and do fitting to the remaining fluctuating points. Because the neighbor stable points have the approximate value, which could be applied to shrink all stable values as a single point. The illustration could be found in the Figure 2. The example is a one-dimension data.</p>
+<p>The model architecture could be found in the Figure 3.</p>
+<p>The point classified as stable value would produce itself as prediction in next second. For the point classified as fluctuating points, it would fit to predict in the pre-training LSTM model.</p>
+<p>It is proved that LSTM model has extraordinary performance in classification [8].</p>
+<p>1.</p>
+<ol>
+<li>F.Hyper-Parameter</li>
+</ol>
+<p>In the case study, there are some hyper-parameter to set by default for the convenient.</p>
+<p>Since all data would be normalized before training, the learning rate would be set as 0.0006, which is suitable for most training value between -1 and 1.</p>
+<p>The neuron number in the single layer would be set as 200. Since the model would be applied in the industry, it is impossible to train a large neural network for a long time.</p>
+<p>The time step is set as 40 steps. Prediction is more accurate while the input steps grow [9]. Considering the practical application for each computer, it is reasonable to choose a low value as steps while it costs a little memory.</p>
+<ol>
+<li>III.Case Study and Analyses<ol>
+<li>A.Anomaly data filtration</li>
+</ol>
+</li>
+</ol>
+<p>The industrial dataset contains a large number of anomaly data due to the fluctuation of the current or machine errors. Therefore, the data filtration is necessary before the prediction. However, we also have done a comparison test to show the difference between the filtration and non-filtration test. The algorithm applied here is the dual time-moving windows anomaly detection algorithm which sets a one-layer FNN and two moving window to detect anomaly data which is based on the model proposed by David J. Hill. Figure 4 shows the comparison between the original data and the filtered data.</p>
+<p>According to the figures above, we could observe that the filtered data is smoother than before. And some data in the figure4 deviated quite a lot from the normal data. If such these are applied for training, the model will be faint to remember plenty of data models.</p>
+<p>1.</p>
+<ol>
+<li>B.One-layer Long Short Term Memory Recurrent Neural Network</li>
+</ol>
+<p>We ran experiments on the open source framework tensorflow. The framework were implemented using Python. For the prediction test, we firstly tested the initial mode – one-layer Long Short Term Memory Recurrent Neural Network with 10,000 records of xy diameter means as the training set and 27,660 records of xy diameter means as the test set. The hidden layer of the model had 200 units with the prediction time step of 40 and the learning rate is set as 0.0006 for the gradient descent function. The details are shown in the table 2.</p>
+<p>TABLE 2 PARAMETERS SETTING</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Layer num</th>
+<th>Unit num</th>
+<th>Learning rate</th>
+<th>Time Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>1</td>
+<td>200 neuron</td>
+<td>0.0006</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 3 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>99.8%</td>
+<td>76.7%</td>
+<td>22.2%</td>
+</tr>
+</tbody>
+</table>
+<p>The figure 5 shows the test result which includes 27660 records. From the figure, we could observe that the prediction line did not coincide with the actual data line very well. However, the table2 shows the intuitive performance of the prediction accuracy. Confidence interval was set as 0.1, 0.01 and 0.001, which was in order to calculate the number of prediction points which fall into the interval deviated from the actual input data. From the table3, we could observe that the prediction model seems to get a satisfactory result when the confidence interval is 0.1 which is 0.9981. However, the accuracy got a rapid reduction when the accuracy is 0.001. We assumed that the lack of the number of layer of the network leads to the failure of prediction accuracy. Therefore, we have done the second experiment of two layer LSTM-RNN.</p>
+<p>1.</p>
+<ol>
+<li>C.Two-layer LSTM RNN model</li>
+</ol>
+<p>Single layer LSTM model shows an unsatisfactory result. Although the model has 99.8% accuracy in an error range of 0.1, it only has 76.7% accuracy in an error range of 0.01. The accuracy of the second decimal place should be above 90% to make an approximate prediction of tendency. Therefore, 2-layer LSTM model aims to solve under-fitting problem. The hyper parameters are set as follows:</p>
+<p>TABLE 4 PARAMETERS SETTING</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Layer num</th>
+<th>Unit num</th>
+<th>Learning rate</th>
+<th>Time Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>2</td>
+<td>200 neuron each layer</td>
+<td>0.0006</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 5 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>99.9%</td>
+<td>96.4%</td>
+<td>23.0%</td>
+</tr>
+</tbody>
+</table>
+<p>The test set is the same as the one layer LSTM experiment. In Figure 6, the result shows satisfactory fitting curve. It is easy to find that the prediction value is much more accuracy from the point 10,000 to 15,000. And the details of the prediction accuracy are listed in the table 5. Compared with the last experiment, the prediction accuracy increased a lot when the confidence interval is 0.01 which increased 19.7%. According to the result above, we could assume that the complicated neural network model will lead to a more precisely prediction.</p>
+<p>However, this model did not work well in precise value prediction. Because the amount of fluctuating points is so little that all fluctuating points are regarded anomaly points by the neural network. In the F part, it would be proved that the trained model does not have any prediction ability due to little neurons.</p>
+<p>In general, 2-layer LSTM model does solve under-fitting problem.</p>
+<p>1.</p>
+<ol>
+<li>D.Dropout LSTM-RNN</li>
+</ol>
+<p>2-layer LSTM could make prediction of tendency. However, if the accurate value (the third decimal place) is required to predict, 23.0% is not enough. Next, drop-out would be applied to improve the 2-layer model performance. If 23.0% was caused by overfitting, then drop-out would be a perfect method to solve it. In the design, drop-out would be added between layer and layer. The hyper parameters are set as follows:</p>
+<p>TABLE 6 PARAMETER SETTINGS</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Dropout rate</th>
+<th>Layer num</th>
+<th>Unit num</th>
+<th>Learning rate</th>
+<th>Time Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>0.675/0.8</td>
+<td>2</td>
+<td>200 neuron each</td>
+<td>0.0006</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 7 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy (drop-out 0.675)</td>
+<td>99.9%</td>
+<td>77.9%</td>
+<td>15.6%</td>
+</tr>
+<tr>
+<td>Accuracy (drop-out 0.8)</td>
+<td>99.9%</td>
+<td>78.8%</td>
+<td>14.3%</td>
+</tr>
+</tbody>
+</table>
+<p>Figure 7 shows the result of drop-out rate 0.675, and Figure 8 shows the result of drop-out rate 0.8. In the Figure 7 and Figure 8, the curve fits unstably. The statics result is calculated as shown in the table 7. The result shows the drop-out weaken 2-layer LSTM model performance. There could be many reasons: original model has fitted perfectly, drop-out place, or single data dimension. Therefore, drop-out is not an appropriate solution to predict the accurate value. It cannot improve the performance of 2-layer LSTM model.</p>
+<p>1.</p>
+<ol>
+<li>E.Recurrent Batch Normalization in LSTM-RNN</li>
+</ol>
+<p>According to the Cesar Laurent&#39;s research, we could considered that the recurrent batch normalization is able to accelerate the convergence of the training criterion. However, they concluded that the RBN may not improve the generalization performance, we tried to test our model which is in order to improve the prediction accuracy of our industrial dataset. For comparison with the initial LSTM model, we set 1 hidden layer with 200 neurons and 0.006 learning rate. The hyper parameters are set as follow:</p>
+<p>TABLE 7 PARAMETER SETTINGS</p>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Layer num</th>
+<th>Unit num</th>
+<th>Learning rate</th>
+<th>Time Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>number</td>
+<td>1</td>
+<td>200 neuron</td>
+<td>0.0006</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 8 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>99.6%</td>
+<td>89.1%</td>
+<td>9.05%</td>
+</tr>
+</tbody>
+</table>
+<p>The figure 9 shows the prediction result. And the details are shown in the table 8. Although the prediction accuracy increased when the confidence interval is 0.01, there is nuance difference between other algorithms. Moreover, the performance of the 0.001 interval is quite unsatisfactory. Therefore, we can conclude that the recurrent batch normalization may not help to improve the prediction precisely.</p>
+<p>1.</p>
+<ol>
+<li>F.Classification and Fit</li>
+</ol>
+<p>In methodology, it has been discussed that 2-layer LSTM cannot predict the accurate value due to the long range of stable value. Then the prediction ability of 2-layer LSTM model is tested based on predict value. The Figure.10 shows bad prediction ability. The value coordinate axis is still normalized value:</p>
+<p>valuenormal=(valueoriginal−mean(data))/standard(data)<br>        (12)</p>
+<p>It can be observed that the final prediction value would trend to the mean. It is reasonable when the number of neurons cannot support fit the complex curve and there is a long range of stable value. However, it is not efficient to solve problem by adding a lot of neurons. In that way, it would cost plenty of time to train, which may not be affordable for industrial company. Classification and fit model could solve both two problems.</p>
+<p>To apply classification and fit model, the training data should be labelled as stable point or violate point by human. First train would be to classify the label. Since the result shows that 95% points are stable point, it is reasonable for LSTM model to regard other points as anomaly points. In the second train, LSTM would fit all violate points. Therefore, there are two sets of parameters for each single LSTM model which is the same as 2-layer LSTM-RNN model. The test results are shown in the figure 11. And the details of prediction accuracy are shown in the table 9</p>
+<p>TABLE 9 PREDICTION ACCURACY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>100%</td>
+<td>97.7%</td>
+<td>58.1%</td>
+</tr>
+</tbody>
+</table>
+<p>TABLE 10 PREDICTION ACCURARCY</p>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>0.1</th>
+<th>0.01</th>
+<th>0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accuracy</td>
+<td>100%</td>
+<td>96.5%</td>
+<td>39.6%</td>
+</tr>
+</tbody>
+</table>
+<p>The result and figure show this model is better than any model before in each error range. Regarding 95% points are stable point, it is necessary to test the slice of data, which contains equivalent amount of stable points and violate points. Here, Figure 12 is the slice data. Figure 13 shows the results, and the details are shown in the table 10. Although the accuracy of error range 0.001 decreases, it is still higher than accuracy of 2-layer model.</p>
+<p>In general, classification and fit model works well in either data or data slice. It is potential for the model to predict the specific value.</p>
+<ol>
+<li>IV.Conclusion</li>
+</ol>
+<p>We have developed a classification prediction algorithm based on the Long Short Term Memory Recurrent Neural Network for industrial data which performs an accurate, fast prediction of the data. We although compared 4 current algorithms based on the RNN. The accuracy of this prediction algorithm is illustrated by a case study involving 36670 wires diameter dataset. Experimental results show that the classification strategy significantly increase the prediction accuracy and has better performance than one-layer, two-layer LSTM-RNN, dropout-LSTM-RNN and RBN-LSTM-RNN algorithms.</p>
+<p>Future work will be carried out to improve the accuracy of prediction chromatically by using the one-hot algorithm or k-means method and we will try to collect various kinds of data which is in order to set the model by using multi-dimension data.</p>
+<p>[3] S. Hoch Reiter and J. Schumacher, &quot;Long short-term memory&quot; (1997) in <em>Neural Computation</em>. doi:10.1162/neco.1997.9.8.1735.</p>
+<p>[4] K. Griff; R. K. Srivastava; J. Kouthik; B. R. Steunebrink; J. Schmidhuber, &quot;LSTM: A Search Space Odyssey&quot; (2015)</p>
+<p>[5] N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever, R. Salakhutdinov, &quot;Dropout: A Simple Way to Prevent Neural Networks from Overfitting&quot; (2014) in Journal of Machine Learning Research 15 (2014) 1929-1958.</p>
+<p>[6] Y. Gal, Z. Ghahramani &quot;A Theoretically Grounded Application of Dropout in Recurrent Neural Networks&quot; NIPS (2016).</p>
+<p>[7] Harris, David and Harris, Sarah &quot;Digital design and computer architecture&quot; (2</p>
+<h1 id="nd"><a href="#nd" class="headerlink" title="nd"></a>nd</h1><p> edition) p. 129. ISBN 978-0-12-394424-5</p>
+<p>[8] M. Wielgosz, A.Skoczen, M.Mertik &quot;Recurrent Neural Networks for anomaly detection in the Post-Mortem time series of LHC superconducting magnets&quot; CoRR abs/1702.00833 (2017): n. pag.</p>
+<p>[9] N. Srivastava, E. Mansimov, R. Salakhutdinov &quot;Unsupervised Learning of Video Representations using LSTMS.&quot; ICML (2015).</p>
+<p></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/24/Online-course-data-analysis-2/" rel="next" title="Online course data analysis(2)">
+                <i class="fa fa-chevron-left"></i> Online course data analysis(2)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/24/Distributed-System-Notes/" rel="prev" title="Distributed System Notes">
+                Distributed System Notes <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Jiafeng Shou</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">Artikel</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prediction-of-Industrial-Data-with-filtration"><span class="nav-number">1.</span> <span class="nav-text">Prediction of Industrial Data with filtration</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nd"><span class="nav-number"></span> <span class="nav-text">nd</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jiafeng Shou</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
